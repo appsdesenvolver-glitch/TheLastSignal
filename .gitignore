@@ -1,0 +1,8 @@
+.godot/
+build/
+*.tmp
+*.keystore
+export_credentials.cfg
+art/characters/*/
+!art/characters/.gitkeep
+__pycache__/

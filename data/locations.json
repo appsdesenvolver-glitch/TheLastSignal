@@ -1,0 +1,1998 @@
+{
+ "rua_corvo": {
+  "name": "Rua do Corvo",
+  "district": "Bairro Norte",
+  "style": "street",
+  "width": 3400,
+  "wall": "6a6258",
+  "ground": "4c4a46",
+  "fog": 0.2,
+  "rain_chance": 0.4,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "estrada9",
+    "to_x": 3300,
+    "label": "Estrada 9 (floresta)",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 260
+   },
+   {
+    "type": "door",
+    "x": 520,
+    "to": "casa_vance",
+    "to_x": 140,
+    "label": "Casa dos Vance",
+    "facade": "house",
+    "color": "5e6a72",
+    "bw": 380
+   },
+   {
+    "type": "lamp",
+    "x": 860,
+    "flicker": true
+   },
+   {
+    "type": "car",
+    "x": 980,
+    "color": "4a3a3a"
+   },
+   {
+    "type": "door",
+    "x": 1350,
+    "to": "casa_cordeiro",
+    "to_x": 140,
+    "label": "Casa dos Cordeiro",
+    "facade": "house",
+    "color": "7a6a58",
+    "bw": 380
+   },
+   {
+    "type": "hide",
+    "x": 1640,
+    "look": "bush",
+    "label": "Arbustos"
+   },
+   {
+    "type": "lamp",
+    "x": 1800
+   },
+   {
+    "type": "phone",
+    "x": 1980
+   },
+   {
+    "type": "save",
+    "x": 1980,
+    "label": "Telefone público (salvar)",
+    "y": 160
+   },
+   {
+    "type": "hide",
+    "x": 2250,
+    "look": "dumpster",
+    "label": "Caçamba"
+   },
+   {
+    "type": "lamp",
+    "x": 2420,
+    "broken": true
+   },
+   {
+    "type": "door",
+    "x": 2950,
+    "to": "casa_halvorsen",
+    "to_x": 160,
+    "label": "Casa Halvorsen",
+    "facade": "haunted",
+    "bw": 460,
+    "bh": 320,
+    "locked_if": {
+     "not_flag": "halvorsen_open"
+    },
+    "locked_text": "Correntes na porta. Alguém trocou o cadeado recentemente.",
+    "req": {
+     "night": true
+    },
+    "req_text": "De dia há gente demais olhando. Volte à noite."
+   },
+   {
+    "type": "clue",
+    "x": 2760,
+    "id": "caixa_correio",
+    "label": "Caixa de correio",
+    "text": "Correspondência de 2004 endereçada a 'A. Halvorsen'. Um homem que morreu em 1979 continua recebendo contas de luz pagas.",
+    "give": "contas_halvorsen",
+    "req": {
+     "chapter_min": 2
+    }
+   },
+   {
+    "type": "exit",
+    "x": 3360,
+    "to": "centro",
+    "to_x": 100,
+    "label": "Centro",
+    "r": 60
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 1500,
+    "b": 3200,
+    "x": 2600,
+    "if": {
+     "night": true,
+     "chapter_min": 2
+    }
+   }
+  ]
+ },
+ "centro": {
+  "name": "Avenida Principal",
+  "district": "Centro",
+  "style": "downtown",
+  "width": 3800,
+  "wall": "5c5650",
+  "ground": "4e4b47",
+  "fog": 0.15,
+  "rain_chance": 0.45,
+  "wet": true,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "rua_corvo",
+    "to_x": 3300,
+    "label": "Rua do Corvo",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 250
+   },
+   {
+    "type": "door",
+    "x": 560,
+    "to": "diner",
+    "to_x": 160,
+    "label": "Marlowe's Diner",
+    "facade": "diner",
+    "sign": "Marlowe's Diner",
+    "sign_color": "b8453a",
+    "sign_flicker": true,
+    "bw": 440,
+    "bh": 280
+   },
+   {
+    "type": "lamp",
+    "x": 860,
+    "flicker": true
+   },
+   {
+    "type": "door",
+    "x": 1200,
+    "to": "loja_radios",
+    "to_x": 140,
+    "label": "Rádios Greer",
+    "facade": "shop",
+    "sign": "Rádios Greer",
+    "sign_color": "4a7a6a",
+    "bw": 380,
+    "bh": 270,
+    "hours": [
+     9,
+     19
+    ],
+    "closed_text": "RÁDIOS GREER — fechado. Abre às 9h."
+   },
+   {
+    "type": "clue",
+    "x": 1520,
+    "id": "cartazes",
+    "label": "Mural de desaparecidos",
+    "text": [
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "Sete cartazes. 'DESAPARECIDO'. O mais antigo é de setembro, o mais novo é de ontem."
+     },
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "Todos sumiram depois das três da manhã. Todos moravam perto de um poste que pisca."
+     }
+    ],
+    "give": "cartazes",
+    "text_by_char": {
+     "elias": [
+      {
+       "who": "player",
+       "expr": "sad",
+       "text": "O rosto do meu pai entre os outros. Alguém escreveu embaixo, a caneta: 'ELE OUVIU'."
+      }
+     ]
+    }
+   },
+   {
+    "type": "lamp",
+    "x": 1650
+   },
+   {
+    "type": "hide",
+    "x": 1780,
+    "look": "dumpster",
+    "label": "Caçamba do beco"
+   },
+   {
+    "type": "door",
+    "x": 2050,
+    "to": "delegacia",
+    "to_x": 160,
+    "label": "Delegacia",
+    "facade": "police",
+    "sign": "Polícia de Ravenhill",
+    "sign_color": "3a5a8a",
+    "bw": 480,
+    "bh": 300
+   },
+   {
+    "type": "lamp",
+    "x": 2400,
+    "flicker": true
+   },
+   {
+    "type": "bench",
+    "x": 2550
+   },
+   {
+    "type": "door",
+    "x": 2950,
+    "to": "igreja",
+    "to_x": 160,
+    "label": "Igreja São Judas",
+    "facade": "church",
+    "sign": "São Judas Tadeu",
+    "bw": 420,
+    "bh": 340,
+    "hours": [
+     7,
+     20
+    ],
+    "closed_text": "Portas da igreja trancadas. Missa às 7h."
+   },
+   {
+    "type": "lamp",
+    "x": 3300
+   },
+   {
+    "type": "exit",
+    "x": 3760,
+    "to": "praca",
+    "to_x": 100,
+    "label": "Praça Memorial",
+    "r": 60
+   }
+  ],
+  "creatures": [
+   {
+    "id": "static",
+    "a": 200,
+    "b": 3600,
+    "x": 1800,
+    "if": {
+     "night": true,
+     "chapter_min": 2
+    }
+   }
+  ]
+ },
+ "praca": {
+  "name": "Praça Memorial",
+  "district": "Centro",
+  "style": "park",
+  "width": 2800,
+  "wall": "5a5a52",
+  "ground": "3c4232",
+  "fog": 0.35,
+  "rain_chance": 0.35,
+  "reflective": true,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "centro",
+    "to_x": 3700,
+    "label": "Avenida Principal",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 320
+   },
+   {
+    "type": "swing",
+    "x": 900
+   },
+   {
+    "type": "lamp",
+    "x": 1150,
+    "flicker": true
+   },
+   {
+    "type": "clue",
+    "x": 1480,
+    "id": "placa",
+    "label": "Placa memorial",
+    "text": "\"AOS 41 DE SANTA INÊS — 31/10/1979. A CIDADE NÃO ESQUECE.\" Alguém raspou um dos nomes até virar só metal.",
+    "give": "placa_41"
+   },
+   {
+    "type": "bench",
+    "x": 1700
+   },
+   {
+    "type": "hide",
+    "x": 1950,
+    "look": "bush",
+    "label": "Cerca viva"
+   },
+   {
+    "type": "lamp",
+    "x": 2200
+   },
+   {
+    "type": "trigger",
+    "x": 1000,
+    "once": "t_ch1_swing",
+    "r": 120,
+    "if": {
+     "chapter": 1,
+     "night": true,
+     "flag": "talked_greer"
+    },
+    "cutscene": "ch1_swing"
+   },
+   {
+    "type": "trigger",
+    "x": 1500,
+    "once": "t_kessler_marta",
+    "r": 200,
+    "if": {
+     "chapter_min": 2,
+     "night": true,
+     "mission_active": "s_kessler"
+    },
+    "cutscene": "kessler_marta"
+   },
+   {
+    "type": "exit",
+    "x": 2760,
+    "to": "escola_ext",
+    "to_x": 100,
+    "label": "Colégio Ravenhill",
+    "r": 60
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 300,
+    "b": 2500,
+    "x": 2300,
+    "if": {
+     "night": true,
+     "flag": "heard_717"
+    }
+   }
+  ]
+ },
+ "escola_ext": {
+  "name": "Colégio Ravenhill",
+  "district": "Centro",
+  "style": "street",
+  "width": 2600,
+  "wall": "6b5d4c",
+  "ground": "4a4844",
+  "fog": 0.2,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "praca",
+    "to_x": 2700,
+    "label": "Praça Memorial",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 400
+   },
+   {
+    "type": "door",
+    "x": 1250,
+    "to": "escola_corredor",
+    "to_x": 200,
+    "label": "Colégio",
+    "facade": "school",
+    "sign": "Colégio Ravenhill — 1952",
+    "bw": 900,
+    "bh": 380,
+    "hours": [
+     7,
+     23
+    ],
+    "closed_text": "O portão está trancado. O vigia só deixa entrar até as 23h."
+   },
+   {
+    "type": "lamp",
+    "x": 1900,
+    "flicker": true
+   },
+   {
+    "type": "hide",
+    "x": 2100,
+    "look": "bush",
+    "label": "Arbustos"
+   },
+   {
+    "type": "exit",
+    "x": 2560,
+    "to": "hospital_ext",
+    "to_x": 100,
+    "label": "Hospital Geral",
+    "r": 60
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 200,
+    "b": 2400,
+    "x": 300,
+    "if": {
+     "night": true,
+     "chapter_min": 3
+    }
+   }
+  ]
+ },
+ "hospital_ext": {
+  "name": "Hospital Geral de Ravenhill",
+  "district": "Colina",
+  "style": "street",
+  "width": 2600,
+  "wall": "7a7a74",
+  "ground": "4c4c4a",
+  "fog": 0.3,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "escola_ext",
+    "to_x": 2500,
+    "label": "Colégio",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 380
+   },
+   {
+    "type": "door",
+    "x": 1250,
+    "to": "hospital_lobby",
+    "to_x": 200,
+    "label": "Hospital Geral",
+    "facade": "hospital",
+    "sign": "Hospital Geral — Pronto-Socorro",
+    "bw": 1000,
+    "bh": 400
+   },
+   {
+    "type": "car",
+    "x": 1900,
+    "color": "d9d6cf"
+   },
+   {
+    "type": "lamp",
+    "x": 2150,
+    "flicker": true
+   },
+   {
+    "type": "exit",
+    "x": 2560,
+    "to": "colina",
+    "to_x": 100,
+    "label": "Trilha da Colina",
+    "r": 60,
+    "req": {
+     "chapter_min": 5
+    },
+    "req_text": "A trilha para a torre está fechada com fita da polícia. Ainda não."
+   }
+  ],
+  "creatures": [
+   {
+    "id": "static",
+    "a": 200,
+    "b": 2400,
+    "x": 600,
+    "if": {
+     "night": true,
+     "chapter_min": 3
+    }
+   }
+  ]
+ },
+ "estrada9": {
+  "name": "Estrada 9",
+  "district": "Floresta",
+  "style": "forest",
+  "width": 3400,
+  "ground": "2f3428",
+  "fog": 0.55,
+  "rain_chance": 0.5,
+  "props": [
+   {
+    "type": "sign",
+    "x": 300,
+    "text": "RAVENHILL 2 km"
+   },
+   {
+    "type": "door",
+    "x": 1000,
+    "to": "posto",
+    "to_x": 160,
+    "label": "Posto da Estrada 9",
+    "facade": "gas",
+    "bw": 520,
+    "hours": [
+     6,
+     23
+    ],
+    "closed_text": "O posto fechou. Benny deixou a luz da bomba acesa."
+   },
+   {
+    "type": "lamp",
+    "x": 1450,
+    "color": "d8e8ff"
+   },
+   {
+    "type": "clue",
+    "x": 1650,
+    "id": "cova",
+    "label": "Terra revirada",
+    "text": "Terra fresca atrás do posto. Uma coleira com plaqueta: 'RUFUS'. Benny enterrou o cachorro — às três da manhã, para ninguém ver ele chorar.",
+    "give": "benny_dog",
+    "req": {
+     "mission_active": "s_benny"
+    },
+    "do": {
+     "set": "benny_cleared"
+    }
+   },
+   {
+    "type": "hide",
+    "x": 1900,
+    "look": "bush",
+    "label": "Mato alto"
+   },
+   {
+    "type": "clue",
+    "x": 2300,
+    "id": "lago",
+    "label": "Margem do Lago Corvo",
+    "text": "Água parada, preta como óleo. Pegadas pequenas saem do lago e voltam para ele.",
+    "give": "pegadas_lago",
+    "text_by_char": {
+     "naomi": [
+      {
+       "who": "player",
+       "expr": "sad",
+       "text": "Foi aqui. Três minutos sem ar. E alguém segurou minha mão no fundo — uma mão pequena, gelada."
+      },
+      {
+       "who": "player",
+       "expr": "scared",
+       "text": "Eu nunca contei isso pra ninguém. A menina tinha um vestido amarelo."
+      }
+     ]
+    },
+    "do": {
+     "set": "lake_visited"
+    }
+   },
+   {
+    "type": "clue",
+    "x": 2600,
+    "id": "fita_carro",
+    "label": "Carro abandonado",
+    "text": "Um carro de 2003 coberto de folhas. No banco, uma fita K7 escrita 'SAM — MIX DA ESTRADA'.",
+    "give": "fita_sam",
+    "req": {
+     "chapter_min": 1
+    }
+   },
+   {
+    "type": "car",
+    "x": 2600,
+    "color": "3a4a3a"
+   },
+   {
+    "type": "exit",
+    "x": 3360,
+    "to": "rua_corvo",
+    "to_x": 100,
+    "label": "Rua do Corvo",
+    "r": 60
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 1600,
+    "b": 3200,
+    "x": 3000,
+    "if": {
+     "night": true,
+     "chapter_min": 2
+    }
+   }
+  ]
+ },
+ "colina": {
+  "name": "Trilha da Colina",
+  "district": "Colina",
+  "style": "hill",
+  "width": 2800,
+  "ground": "2a2c26",
+  "fog": 0.7,
+  "rain_chance": 1.0,
+  "props": [
+   {
+    "type": "exit",
+    "x": 40,
+    "to": "hospital_ext",
+    "to_x": 2500,
+    "label": "Hospital Geral",
+    "r": 60
+   },
+   {
+    "type": "lamp",
+    "x": 600,
+    "broken": true
+   },
+   {
+    "type": "hide",
+    "x": 1000,
+    "look": "bush",
+    "label": "Rochas"
+   },
+   {
+    "type": "hide",
+    "x": 1700,
+    "look": "bush",
+    "label": "Rochas"
+   },
+   {
+    "type": "lamp",
+    "x": 1900,
+    "flicker": true,
+    "color": "ff6a5a"
+   },
+   {
+    "type": "door",
+    "x": 2600,
+    "to": "torre",
+    "to_x": 160,
+    "label": "Torre KRVN",
+    "facade": "station",
+    "sign": "KRVN 7.17",
+    "bw": 420,
+    "bh": 360
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 500,
+    "b": 2400,
+    "x": 1400,
+    "if": {}
+   },
+   {
+    "id": "static",
+    "a": 200,
+    "b": 2600,
+    "x": 300,
+    "if": {}
+   }
+  ]
+ },
+ "casa_vance": {
+  "name": "Casa dos Vance",
+  "district": "Bairro Norte",
+  "interior": true,
+  "theme": "home",
+  "width": 1700,
+  "wall": "4c5258",
+  "floor": "3a2c22",
+  "lightness": 0.55,
+  "windows": [
+   520,
+   1300
+  ],
+  "deco": [
+   {
+    "k": "shelf",
+    "x": 320
+   },
+   {
+    "k": "desk",
+    "x": 760
+   },
+   {
+    "k": "radio_rack",
+    "x": 980
+   },
+   {
+    "k": "frame",
+    "x": 1150
+   },
+   {
+    "k": "bed",
+    "x": 1450
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 140,
+    "to": "rua_corvo",
+    "to_x": 520,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 800,
+    "h": 420
+   },
+   {
+    "type": "clue",
+    "x": 790,
+    "id": "bancada",
+    "label": "Bancada do pai",
+    "text": [
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "A bancada do meu pai. Ferro de solda ainda no suporte, como se ele fosse voltar em cinco minutos."
+     },
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "No caderno, a mesma coisa escrita trinta vezes: 7.17 — 7.17 — 7.17. E na última página: 'Eles não sabem que estão mortos.'"
+     }
+    ],
+    "give": "caderno_daniel",
+    "text_by_char": {
+     "maya": "Um caderno de técnico cheio de '7.17'. Na última página: 'Eles não sabem que estão mortos.'",
+     "theo": "Anotações de rádio. '7.17' repetido. 'Eles não sabem que estão mortos.'",
+     "naomi": "Caderno de rádio. '7.17'. 'Eles não sabem que estão mortos.' A tinta ainda está fresca."
+    }
+   },
+   {
+    "type": "clue",
+    "x": 1150,
+    "id": "foto_familia",
+    "label": "Foto de família",
+    "text": "Eu, meu pai e minha mãe no Lago Corvo. A mãe foi embora quando eu tinha oito. O pai ficou. Até agora.",
+    "req": {
+     "char": "elias"
+    },
+    "give": "foto_familia"
+   },
+   {
+    "type": "save",
+    "x": 1450,
+    "label": "Cama (salvar)",
+    "y": 110
+   },
+   {
+    "type": "hide",
+    "x": 1600,
+    "look": "wardrobe",
+    "label": "Guarda-roupa"
+   }
+  ]
+ },
+ "casa_cordeiro": {
+  "name": "Casa dos Cordeiro",
+  "district": "Bairro Norte",
+  "interior": true,
+  "theme": "home",
+  "width": 1700,
+  "wall": "5e4a44",
+  "floor": "3c2a20",
+  "lightness": 0.6,
+  "windows": [
+   460,
+   1450
+  ],
+  "reflective": true,
+  "curtain": "6a3a2a",
+  "deco": [
+   {
+    "k": "shelf",
+    "x": 300
+   },
+   {
+    "k": "tv",
+    "x": 700
+   },
+   {
+    "k": "mirror",
+    "x": 860
+   },
+   {
+    "k": "plant",
+    "x": 980
+   },
+   {
+    "k": "table",
+    "x": 1250
+   },
+   {
+    "k": "frame",
+    "x": 1250
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 140,
+    "to": "rua_corvo",
+    "to_x": 1350,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 900,
+    "h": 420
+   },
+   {
+    "type": "clue",
+    "x": 860,
+    "id": "espelho_lucia",
+    "label": "Espelho da sala",
+    "text": "O espelho mostra a sala inteira. A cadeira de balanço. O tricô se mexendo sozinho no colo de ninguém.",
+    "req": {
+     "met": "lucia"
+    },
+    "give": "tell_lucia_mirror"
+   },
+   {
+    "type": "clue",
+    "x": 1250,
+    "id": "album",
+    "label": "Álbum de fotos",
+    "text": [
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "Álbum da família. 1979: a vó Lúcia na frente do Santa Inês, uniforme de enfermeira."
+     },
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "O mesmo rosto. As mesmas rugas. Vinte e cinco anos e ela não mudou nem um fio de cabelo."
+     }
+    ],
+    "give": "album_lucia"
+   },
+   {
+    "type": "save",
+    "x": 1550,
+    "label": "Sofá (salvar)",
+    "y": 100
+   },
+   {
+    "type": "hide",
+    "x": 450,
+    "look": "curtain",
+    "label": "Cortina"
+   }
+  ]
+ },
+ "diner": {
+  "name": "Marlowe's Diner",
+  "district": "Centro",
+  "interior": true,
+  "theme": "diner",
+  "width": 1900,
+  "wall": "6e5a4a",
+  "floor": "2a2a2e",
+  "lightness": 0.75,
+  "windows": [
+   400,
+   700,
+   1500
+  ],
+  "reflective": true,
+  "deco": [
+   {
+    "k": "booth",
+    "x": 400
+   },
+   {
+    "k": "booth",
+    "x": 700
+   },
+   {
+    "k": "counter",
+    "x": 1050
+   },
+   {
+    "k": "frame",
+    "x": 1300
+   },
+   {
+    "k": "booth",
+    "x": 1500
+   },
+   {
+    "k": "mirror",
+    "x": 1720
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "centro",
+    "to_x": 560,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 600,
+    "h": 420,
+    "color": "ffd9a0"
+   },
+   {
+    "type": "light",
+    "x": 1300,
+    "h": 420,
+    "color": "ffd9a0"
+   },
+   {
+    "type": "clue",
+    "x": 1300,
+    "id": "foto_1979",
+    "label": "Foto emoldurada",
+    "text": [
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "'Inauguração do Marlowe's — 1978'. Edith atrás do balcão. Mesmo avental, mesmo coque."
+     },
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "E ao fundo, numa mesa, um homem de óculos redondos com um rádio portátil. Na legenda: 'Dr. A. Halvorsen, KRVN'."
+     }
+    ],
+    "give": "foto_1979",
+    "req": {
+     "chapter_min": 2
+    }
+   },
+   {
+    "type": "clue",
+    "x": 1720,
+    "id": "espelho_diner",
+    "label": "Espelho do banheiro",
+    "text": "No espelho, o balcão aparece vazio. Mas eu estou ouvindo a Edith cantarolar ali agora mesmo.",
+    "req": {
+     "met": "edith",
+     "chapter_min": 2
+    },
+    "give": "tell_edith_mirror"
+   },
+   {
+    "type": "save",
+    "x": 500,
+    "label": "Mesa do canto (salvar)",
+    "y": 140
+   },
+   {
+    "type": "trigger",
+    "x": 1000,
+    "once": "t_ch1_end",
+    "r": 200,
+    "if": {
+     "chapter": 1,
+     "flag": "heard_717"
+    },
+    "cutscene": "ch1_end"
+   },
+   {
+    "type": "trigger",
+    "x": 1000,
+    "once": "t_ch2_edith",
+    "r": 260,
+    "if": {
+     "chapter": 2,
+     "deduction": "ded_edith",
+     "hour_between": [
+      1,
+      5
+     ]
+    },
+    "cutscene": "ch2_edith"
+   }
+  ]
+ },
+ "loja_radios": {
+  "name": "Rádios Greer",
+  "district": "Centro",
+  "interior": true,
+  "theme": "shop",
+  "width": 1500,
+  "wall": "4a4a42",
+  "floor": "33291f",
+  "lightness": 0.6,
+  "windows": [
+   400
+  ],
+  "deco": [
+   {
+    "k": "shelf",
+    "x": 250
+   },
+   {
+    "k": "radio_rack",
+    "x": 600
+   },
+   {
+    "k": "counter",
+    "x": 950
+   },
+   {
+    "k": "boxes",
+    "x": 1300
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 140,
+    "to": "centro",
+    "to_x": 1200,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 800,
+    "h": 400
+   },
+   {
+    "type": "clue",
+    "x": 600,
+    "id": "radios",
+    "label": "Prateleira de rádios",
+    "text": "Uns vinte rádios ligados no mínimo, todos fora de estação. Todos chiando no mesmo ritmo — como uma respiração."
+   },
+   {
+    "type": "clue",
+    "x": 1300,
+    "id": "caixa_greer",
+    "label": "Caixa lacrada",
+    "text": "'KRVN — NÃO ABRIR'. Etiqueta escrita à mão, datada de novembro de 1979.",
+    "req": {
+     "chapter_min": 2,
+     "mission_active": "s_greer"
+    },
+    "give": "caixa_krvn",
+    "do": {
+     "set": "opened_box"
+    }
+   }
+  ]
+ },
+ "delegacia": {
+  "name": "Delegacia de Ravenhill",
+  "district": "Centro",
+  "interior": true,
+  "theme": "police",
+  "width": 2100,
+  "wall": "4a5058",
+  "floor": "2a2c30",
+  "lightness": 0.7,
+  "windows": [
+   500,
+   1300
+  ],
+  "deco": [
+   {
+    "k": "desk",
+    "x": 400
+   },
+   {
+    "k": "board",
+    "x": 900
+   },
+   {
+    "k": "desk",
+    "x": 1500
+   },
+   {
+    "k": "cell",
+    "x": 1850
+   },
+   {
+    "k": "locker",
+    "x": 1150
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "centro",
+    "to_x": 2050,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 700,
+    "h": 420,
+    "color": "e0f0ff"
+   },
+   {
+    "type": "light",
+    "x": 1500,
+    "h": 420,
+    "color": "e0f0ff"
+   },
+   {
+    "type": "clue",
+    "x": 900,
+    "id": "quadro_policia",
+    "label": "Quadro de casos",
+    "text": "Cada desaparecimento tem um alfinete. Todos ligados por barbante à torre KRVN. E todos carimbados: 'ARQUIVADO — FUGA VOLUNTÁRIA'. Assinado: R. Kessler.",
+    "give": "quadro_kessler"
+   },
+   {
+    "type": "clue",
+    "x": 1520,
+    "id": "gaveta_kessler",
+    "label": "Gaveta do delegado",
+    "text": "Uma foto de casamento de 1977 e uma carta de óbito: 'Marta Kessler, enfermeira, Santa Inês, 31/10/1979'. Mas eu vi essa mulher ontem.",
+    "req": {
+     "night": true
+    },
+    "give": "obito_marta",
+    "repeat_text": "A certidão de óbito de Marta. Ainda aqui."
+   },
+   {
+    "type": "hide",
+    "x": 1150,
+    "look": "locker",
+    "label": "Armário de evidências"
+   }
+  ]
+ },
+ "igreja": {
+  "name": "Igreja São Judas Tadeu",
+  "district": "Centro",
+  "interior": true,
+  "theme": "church",
+  "width": 2200,
+  "wall": "5a544c",
+  "floor": "3a3430",
+  "lightness": 0.45,
+  "windows": [
+   450,
+   900,
+   1350,
+   1800
+  ],
+  "curtain": "3a2a4a",
+  "deco": [
+   {
+    "k": "pews",
+    "x": 700
+   },
+   {
+    "k": "pews",
+    "x": 1150
+   },
+   {
+    "k": "altar",
+    "x": 1800
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "centro",
+    "to_x": 2950,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 1800,
+    "h": 300,
+    "color": "ffb070",
+    "energy": 0.7
+   },
+   {
+    "type": "clue",
+    "x": 1000,
+    "id": "vitral",
+    "label": "Vitral",
+    "text": "Um vitral novo, de 1980: quarenta e uma velas e uma torre no lugar da cruz."
+   },
+   {
+    "type": "clue",
+    "x": 2000,
+    "id": "sacristia",
+    "label": "Armário da sacristia",
+    "text": "Trancado. A fechadura tem a mesma marca do cadeado da Casa Halvorsen.",
+    "req": {
+     "chapter_min": 2
+    }
+   }
+  ]
+ },
+ "escola_corredor": {
+  "name": "Colégio — Corredor Principal",
+  "district": "Centro",
+  "interior": true,
+  "theme": "school",
+  "width": 2500,
+  "wall": "5b6a5e",
+  "floor": "3a3a36",
+  "lightness": 0.7,
+  "windows": [
+   600,
+   1100,
+   1600,
+   2100
+  ],
+  "deco": [
+   {
+    "k": "locker",
+    "x": 500
+   },
+   {
+    "k": "board",
+    "x": 900
+   },
+   {
+    "k": "locker",
+    "x": 1300
+   },
+   {
+    "k": "locker",
+    "x": 2000
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 200,
+    "to": "escola_ext",
+    "to_x": 1250,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 700,
+    "h": 420,
+    "color": "e8f0e0"
+   },
+   {
+    "type": "light",
+    "x": 1700,
+    "h": 420,
+    "color": "e8f0e0"
+   },
+   {
+    "type": "clue",
+    "x": 900,
+    "id": "mural_echo",
+    "label": "Mural do jornal",
+    "text": "The Ravenhill Echo, edição censurada: a matéria da Maya sobre os desaparecidos foi arrancada. Só ficou o título: 'QUEM ESTÁ OUVINDO?'",
+    "give": "jornal_censurado"
+   },
+   {
+    "type": "clue",
+    "x": 1850,
+    "id": "radio_abel",
+    "label": "Rádio do vigia",
+    "text": "Um rádio de pilha antigo, sintonizado em 7.17. Número de série gravado: KRVN-001. Peça de 1979.",
+    "req": {
+     "chapter_min": 3
+    },
+    "give": "radio_abel"
+   },
+   {
+    "type": "hide",
+    "x": 1300,
+    "look": "locker",
+    "label": "Armário"
+   },
+   {
+    "type": "hide",
+    "x": 2000,
+    "look": "locker",
+    "label": "Armário"
+   },
+   {
+    "type": "save",
+    "x": 2300,
+    "label": "Sala do jornal (salvar)",
+    "y": 140
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 400,
+    "b": 2300,
+    "x": 2200,
+    "if": {
+     "night": true,
+     "chapter_min": 3
+    }
+   }
+  ]
+ },
+ "hospital_lobby": {
+  "name": "Hospital Geral — Recepção",
+  "district": "Colina",
+  "interior": true,
+  "theme": "hospital",
+  "width": 2300,
+  "wall": "8a9290",
+  "floor": "4a4e4e",
+  "lightness": 0.85,
+  "windows": [
+   500,
+   1000
+  ],
+  "power_flag": "hospital_blackout",
+  "deco": [
+   {
+    "k": "desk",
+    "x": 700
+   },
+   {
+    "k": "hospital_bed",
+    "x": 1250
+   },
+   {
+    "k": "plant",
+    "x": 1000
+   },
+   {
+    "k": "locker",
+    "x": 1800
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 200,
+    "to": "hospital_ext",
+    "to_x": 1250,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 700,
+    "h": 420,
+    "color": "e8fff8"
+   },
+   {
+    "type": "light",
+    "x": 1600,
+    "h": 420,
+    "color": "e8fff8"
+   },
+   {
+    "type": "clue",
+    "x": 1250,
+    "id": "prontuario",
+    "label": "Prontuário do leito 4",
+    "text": "Paciente: J. Doe. 'Repete a frase: o garoto de moletom vermelho quer ir para casa.' Assinado: Enf. C. Wynn.",
+    "give": "prontuario_4",
+    "text_by_char": {
+     "theo": [
+      {
+       "who": "player",
+       "expr": "sad",
+       "text": "Moletom vermelho. O Sam saiu de casa com o moletom vermelho."
+      },
+      {
+       "who": "player",
+       "expr": "neutral",
+       "text": "Assinado pela enfermeira Wynn. Eu nunca vi o nome dela na escala."
+      }
+     ]
+    }
+   },
+   {
+    "type": "clue",
+    "x": 1800,
+    "id": "armario_theo",
+    "label": "Armário dos funcionários",
+    "text": "O armário do Theo. Uma foto do Sam presa na porta e um molho de chaves do plantão.",
+    "req": {
+     "char": "theo"
+    },
+    "give": "chaves_plantao",
+    "do": {
+     "set": "subsolo_key"
+    }
+   },
+   {
+    "type": "door",
+    "x": 2150,
+    "to": "hospital_subsolo",
+    "to_x": 200,
+    "label": "Escada do subsolo",
+    "locked_if": {
+     "not_flag": "subsolo_key"
+    },
+    "locked_text": "'ACESSO RESTRITO — ALA ANTIGA'. Precisa da chave.",
+    "req": {
+     "chapter_min": 3
+    },
+    "req_text": "Uma porta para o subsolo. Não há motivo para descer... ainda."
+   },
+   {
+    "type": "save",
+    "x": 400,
+    "label": "Sala de espera (salvar)",
+    "y": 140
+   },
+   {
+    "type": "trigger",
+    "x": 2000,
+    "once": "t_ch3_end",
+    "r": 160,
+    "if": {
+     "chapter": 3,
+     "flag": "got_notas"
+    },
+    "cutscene": "ch3_end"
+   },
+   {
+    "type": "trigger",
+    "x": 1500,
+    "once": "t_ch3_clara",
+    "r": 80,
+    "if": {
+     "chapter": 3,
+     "night": true,
+     "met": "clara",
+     "flag": "talked_clara"
+    },
+    "do": {
+     "set": "clara_seen"
+    }
+   }
+  ]
+ },
+ "hospital_subsolo": {
+  "name": "Subsolo — Ala Santa Inês",
+  "district": "Colina",
+  "interior": true,
+  "theme": "basement",
+  "width": 2800,
+  "wall": "3a3a36",
+  "floor": "242422",
+  "lightness": 0.15,
+  "deco": [
+   {
+    "k": "hospital_bed",
+    "x": 600
+   },
+   {
+    "k": "boxes",
+    "x": 1000
+   },
+   {
+    "k": "hospital_bed",
+    "x": 1500
+   },
+   {
+    "k": "machine",
+    "x": 2450
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 200,
+    "to": "hospital_lobby",
+    "to_x": 2100,
+    "label": "Subir"
+   },
+   {
+    "type": "light",
+    "x": 900,
+    "h": 400,
+    "color": "a0b0ff",
+    "energy": 0.5
+   },
+   {
+    "type": "clue",
+    "x": 1100,
+    "id": "cracha_sam",
+    "label": "Crachá no chão",
+    "text": "Um crachá de visitante: 'SAM ASHFORD — 31/10/2003'. Ele esteve aqui embaixo. Na noite em que sumiu.",
+    "give": "cracha_sam",
+    "text_by_char": {
+     "theo": [
+      {
+       "who": "player",
+       "expr": "scared",
+       "text": "Sam... você veio me ver no plantão. Eu estava de folga. Eu estava de folga."
+      }
+     ]
+    },
+    "do": {
+     "set": "sam_trace"
+    }
+   },
+   {
+    "type": "hide",
+    "x": 1300,
+    "look": "locker",
+    "label": "Armário enferrujado"
+   },
+   {
+    "type": "hide",
+    "x": 1900,
+    "look": "desk",
+    "label": "Debaixo da mesa"
+   },
+   {
+    "type": "clue",
+    "x": 2450,
+    "id": "transmissor",
+    "label": "Transmissor queimado",
+    "text": [
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "O transmissor de 1979. Metade derretida. A outra metade... ligada. Sem tomada nenhuma."
+     },
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "Uma pasta presa na carcaça: 'PROJETO LAMPARINA — Dr. A. Halvorsen'. 'Se a voz for gravada no sinal, a pessoa não precisa terminar.'"
+     }
+    ],
+    "give": "notas_lamparina",
+    "cutscene": "ch3_listener",
+    "do": {
+     "set": "got_notas"
+    }
+   }
+  ],
+  "creatures": [
+   {
+    "id": "listener",
+    "a": 700,
+    "b": 2300,
+    "x": 1700,
+    "if": {
+     "flag": "got_notas"
+    }
+   }
+  ]
+ },
+ "posto": {
+  "name": "Posto da Estrada 9",
+  "district": "Floresta",
+  "interior": true,
+  "theme": "gas",
+  "width": 1500,
+  "wall": "6a6a5e",
+  "floor": "3a3a38",
+  "lightness": 0.8,
+  "windows": [
+   400,
+   1000
+  ],
+  "deco": [
+   {
+    "k": "shelf",
+    "x": 300
+   },
+   {
+    "k": "counter",
+    "x": 800
+   },
+   {
+    "k": "fridge",
+    "x": 1250
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "estrada9",
+    "to_x": 1000,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 700,
+    "h": 420,
+    "color": "f0fff0"
+   },
+   {
+    "type": "clue",
+    "x": 1250,
+    "id": "oficina",
+    "label": "Bancada da oficina",
+    "text": "A bancada da Naomi. Uma lanterna de mergulho e um recorte de 1995: 'MENINA RESGATADA DO LAGO CORVO APÓS 3 MINUTOS'.",
+    "req": {
+     "char": "naomi"
+    },
+    "give": "recorte_1995"
+   },
+   {
+    "type": "save",
+    "x": 560,
+    "label": "Banco do balcão (salvar)",
+    "y": 120
+   }
+  ]
+ },
+ "casa_halvorsen": {
+  "name": "Casa Halvorsen",
+  "district": "Bairro Norte",
+  "interior": true,
+  "theme": "home",
+  "width": 2600,
+  "wall": "2e2a26",
+  "floor": "241a14",
+  "lightness": 0.1,
+  "windows": [
+   700,
+   1600
+  ],
+  "curtain": "2a1a1a",
+  "reflective": true,
+  "deco": [
+   {
+    "k": "frame",
+    "x": 500
+   },
+   {
+    "k": "table",
+    "x": 800
+   },
+   {
+    "k": "mirror",
+    "x": 1150
+   },
+   {
+    "k": "shelf",
+    "x": 1450
+   },
+   {
+    "k": "stairs",
+    "x": 2000
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "rua_corvo",
+    "to_x": 2950,
+    "label": "Sair"
+   },
+   {
+    "type": "clue",
+    "x": 500,
+    "id": "retrato",
+    "label": "Retrato de família",
+    "text": "Halvorsen, uma mulher e uma menina de vestido amarelo. Atrás: 'Aurelio, Ana e Iris — 1978'.",
+    "give": "retrato_iris"
+   },
+   {
+    "type": "clue",
+    "x": 1150,
+    "id": "espelho_halvorsen",
+    "label": "Espelho",
+    "text": "No espelho, atrás de mim, um homem de óculos redondos ajeita um rádio. Quando me viro, não há ninguém.",
+    "give": "espelho_halvorsen"
+   },
+   {
+    "type": "hide",
+    "x": 1450,
+    "look": "wardrobe",
+    "label": "Armário"
+   },
+   {
+    "type": "clue",
+    "x": 1750,
+    "id": "certidao",
+    "label": "Gaveta",
+    "text": "Certidão de óbito: 'Iris Halvorsen, 8 anos. Afogamento. Lago Corvo, 14/08/1979'. Dois meses antes do incêndio.",
+    "give": "certidao_iris"
+   },
+   {
+    "type": "door",
+    "x": 2400,
+    "to": "lab_lamparina",
+    "to_x": 200,
+    "label": "Alçapão no porão",
+    "req": {
+     "flag": "found_hatch"
+    },
+    "req_text": "O piso range diferente aqui. Há algo embaixo do tapete."
+   },
+   {
+    "type": "clue",
+    "x": 2400,
+    "id": "tapete",
+    "label": "Tapete",
+    "text": "Um alçapão escondido sob o tapete. Cheiro de ozônio subindo pelas frestas.",
+    "do": {
+     "set": "found_hatch"
+    },
+    "req": {
+     "not_flag": "found_hatch"
+    },
+    "r": 50
+   }
+  ],
+  "creatures": [
+   {
+    "id": "hollow",
+    "a": 600,
+    "b": 2300,
+    "x": 1900,
+    "if": {}
+   }
+  ]
+ },
+ "lab_lamparina": {
+  "name": "Laboratório Lamparina",
+  "district": "Bairro Norte",
+  "interior": true,
+  "theme": "lab",
+  "width": 2400,
+  "wall": "3a403e",
+  "floor": "1e2220",
+  "lightness": 0.25,
+  "deco": [
+   {
+    "k": "radio_rack",
+    "x": 500
+   },
+   {
+    "k": "desk",
+    "x": 900
+   },
+   {
+    "k": "machine",
+    "x": 1400
+   },
+   {
+    "k": "radio_rack",
+    "x": 1800
+   },
+   {
+    "k": "board",
+    "x": 2100
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 200,
+    "to": "casa_halvorsen",
+    "to_x": 2400,
+    "label": "Subir"
+   },
+   {
+    "type": "light",
+    "x": 1400,
+    "h": 350,
+    "color": "80ffb0",
+    "energy": 0.6
+   },
+   {
+    "type": "clue",
+    "x": 900,
+    "id": "diario",
+    "label": "Diário de Halvorsen",
+    "text": [
+     {
+      "who": "player",
+      "expr": "neutral",
+      "text": "'Iris continua cantando no rádio. Se eu mantiver o sinal, ela não precisa ir.'"
+     },
+     {
+      "who": "player",
+      "expr": "scared",
+      "text": "'Quarenta e uma vozes. Elas vão manter a voz dela acesa. A cada vinte e cinco anos, o sinal precisa de novas.'"
+     }
+    ],
+    "give": "diario_halvorsen"
+   },
+   {
+    "type": "clue",
+    "x": 2100,
+    "id": "fichas",
+    "label": "Fichas de pacientes",
+    "text": "Fichas de 1979 com fotos. Edith Marlowe. Lúcia Cordeiro. Clara Wynn. Marta Kessler. E uma de 2004: Daniel Vance — 'voz compatível'.",
+    "give": "fichas_lamparina",
+    "do": {
+     "set": "know_daniel"
+    }
+   },
+   {
+    "type": "trigger",
+    "x": 1400,
+    "once": "t_ch4_reel",
+    "r": 120,
+    "if": {
+     "chapter": 4,
+     "evidence": "diario_halvorsen"
+    },
+    "cutscene": "ch4_jonah"
+   }
+  ]
+ },
+ "torre": {
+  "name": "Torre KRVN",
+  "district": "Colina",
+  "interior": true,
+  "theme": "lab",
+  "width": 3000,
+  "wall": "2a2c30",
+  "floor": "1a1a1c",
+  "lightness": 0.2,
+  "deco": [
+   {
+    "k": "machine",
+    "x": 600
+   },
+   {
+    "k": "radio_rack",
+    "x": 1300
+   },
+   {
+    "k": "stairs",
+    "x": 1900
+   },
+   {
+    "k": "machine",
+    "x": 2600
+   }
+  ],
+  "props": [
+   {
+    "type": "door",
+    "x": 160,
+    "to": "colina",
+    "to_x": 2600,
+    "label": "Sair"
+   },
+   {
+    "type": "light",
+    "x": 1500,
+    "h": 380,
+    "color": "ff6050",
+    "energy": 0.6
+   },
+   {
+    "type": "relay",
+    "x": 700,
+    "label": "Relé A",
+    "flag": "relay1",
+    "do": {
+     "set": "relay1"
+    },
+    "req": {
+     "flag": "maestro_awake"
+    },
+    "req_text": "Desligado. Nada acontece."
+   },
+   {
+    "type": "relay",
+    "x": 1600,
+    "label": "Relé B",
+    "flag": "relay2",
+    "do": {
+     "set": "relay2"
+    },
+    "req": {
+     "flag": "maestro_awake"
+    },
+    "req_text": "Desligado. Nada acontece."
+   },
+   {
+    "type": "relay",
+    "x": 2700,
+    "label": "Relé C",
+    "flag": "relay3",
+    "do": {
+     "set": "relay3"
+    },
+    "req": {
+     "flag": "maestro_awake"
+    },
+    "req_text": "Desligado. Nada acontece."
+   },
+   {
+    "type": "hide",
+    "x": 1100,
+    "look": "locker",
+    "label": "Gabinete"
+   },
+   {
+    "type": "hide",
+    "x": 2200,
+    "look": "locker",
+    "label": "Gabinete"
+   },
+   {
+    "type": "trigger",
+    "x": 500,
+    "once": "t_ch5_maestro",
+    "r": 120,
+    "if": {
+     "chapter": 5
+    },
+    "cutscene": "ch5_maestro"
+   },
+   {
+    "type": "trigger",
+    "x": 1500,
+    "once": "t_ch5_final",
+    "r": 3000,
+    "if": {
+     "flags": [
+      "relay1",
+      "relay2",
+      "relay3"
+     ]
+    },
+    "cutscene": "ch5_final"
+   }
+  ],
+  "creatures": [
+   {
+    "id": "maestro",
+    "a": 300,
+    "b": 2800,
+    "x": 2800,
+    "if": {
+     "flag": "maestro_awake",
+     "not_flag": "final_done"
+    }
+   }
+  ]
+ }
+}

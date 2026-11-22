@@ -1,0 +1,301 @@
+{
+ "chapters": [
+  {
+   "n": 1,
+   "title": "Frequência Morta",
+   "start_hour": 16.5
+  },
+  {
+   "n": 2,
+   "title": "Café às Três",
+   "start_hour": 9.0,
+   "intro": "ch2_intro",
+   "skip_effects": {
+    "set": [
+     "talked_greer",
+     "heard_717",
+     "ch1_done"
+    ],
+    "give": [
+     "radio_daniel",
+     "cartazes"
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "title": "Santa Inês",
+   "start_hour": 10.0,
+   "intro": "ch3_intro",
+   "skip_effects": {
+    "set": [
+     "talked_greer",
+     "heard_717",
+     "ch1_done",
+     "edith_confronted",
+     "know_spirits"
+    ],
+    "give": [
+     "radio_daniel",
+     "cartazes",
+     "foto_1979",
+     "livro_obitos",
+     "edith_testemunho"
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "title": "A Casa Halvorsen",
+   "start_hour": 18.0,
+   "intro": "ch4_intro",
+   "skip_effects": {
+    "set": [
+     "talked_greer",
+     "heard_717",
+     "ch1_done",
+     "edith_confronted",
+     "know_spirits",
+     "got_notas",
+     "subsolo_key"
+    ],
+    "give": [
+     "radio_daniel",
+     "cartazes",
+     "foto_1979",
+     "livro_obitos",
+     "edith_testemunho",
+     "notas_lamparina"
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "title": "O Último Sinal",
+   "start_hour": 22.0,
+   "intro": "ch5_intro",
+   "skip_effects": {
+    "set": [
+     "talked_greer",
+     "heard_717",
+     "ch1_done",
+     "edith_confronted",
+     "know_spirits",
+     "got_notas",
+     "subsolo_key",
+     "halvorsen_open",
+     "know_halvorsen",
+     "storm",
+     "jonah_saved"
+    ],
+    "give": [
+     "radio_daniel",
+     "cartazes",
+     "foto_1979",
+     "livro_obitos",
+     "edith_testemunho",
+     "notas_lamparina",
+     "diario_halvorsen",
+     "fichas_lamparina"
+    ]
+   }
+  }
+ ],
+ "endings": [
+  {
+   "id": "end_true",
+   "kind": "Verdadeiro",
+   "title": "Ravenhill Acorda",
+   "cutscene": "end_true",
+   "cond": {
+    "flag": "final_iris",
+    "spirits_correct_min": 5,
+    "wrong_marks_max": 0,
+    "flags": [
+     "final_iris",
+     "jonah_saved"
+    ]
+   },
+   "summary": "Iris canta a última música. O Maestro escuta. Os 41 partem em paz, Jonah vive, e os levados voltam para casa ao amanhecer.",
+   "hint": "Descubra todos os espíritos sem acusar inocentes, salve quem puder e encontre quem o Maestro ouviria."
+  },
+  {
+   "id": "end_hidden",
+   "kind": "Sobrenatural oculto",
+   "title": "Os Quarenta e Um",
+   "cutscene": "end_hidden",
+   "cond": {
+    "flag": "final_iris"
+   },
+   "summary": "Iris leva o pai pela mão. Os 41 vão juntos — mas alguns que você não reconheceu ficam para trás, perdidos entre estações.",
+   "hint": "Há alguém que o Maestro escutaria."
+  },
+  {
+   "id": "end_bad",
+   "kind": "Ruim",
+   "title": "Eco",
+   "cutscene": "end_bad",
+   "cond": {
+    "any": [
+     {
+      "flag": "final_join"
+     },
+     {
+      "not": {
+       "wrong_marks_max": 2
+      }
+     }
+    ]
+   },
+   "summary": "Você virou voz. Na próxima transmissão, alguém em Ravenhill vai ouvir você contando até 41.",
+   "hint": "Confie em quem não deve. Acuse quem não deve."
+  },
+  {
+   "id": "end_secret",
+   "kind": "Secreto",
+   "title": "Transmissão",
+   "cutscene": "end_secret",
+   "cond": {
+    "flag": "final_keep",
+    "trust_min": {
+     "edith": 2
+    }
+   },
+   "summary": "Você assume o microfone. Edith serve café às três. Ninguém mais precisa ser levado — você escolhe quem fica.",
+   "hint": "Proteja o segredo de quem te protegeu."
+  },
+  {
+   "id": "end_elias",
+   "kind": "Personagem",
+   "title": "A Voz do Pai",
+   "cutscene": "end_elias",
+   "cond": {
+    "flag": "final_destroy",
+    "char": "elias",
+    "deduction": "ded_daniel"
+   },
+   "summary": "Daniel Vance sai da torre carregado pelo filho. O walkie-talkie nunca mais chia.",
+   "hint": "Elias: descubra onde Daniel está."
+  },
+  {
+   "id": "end_maya",
+   "kind": "Personagem",
+   "title": "Primeira Página",
+   "cutscene": "end_maya",
+   "cond": {
+    "flag": "final_destroy",
+    "char": "maya",
+    "deduction": "ded_lucia"
+   },
+   "summary": "Maya publica a verdade. A avó se despede com um 'minha luz' que fica na foto para sempre.",
+   "hint": "Maya: descubra a verdade sobre a avó."
+  },
+  {
+   "id": "end_theo",
+   "kind": "Personagem",
+   "title": "Plantão Final",
+   "cutscene": "end_theo",
+   "cond": {
+    "flag": "final_destroy",
+    "char": "theo",
+    "deduction": "ded_sam"
+   },
+   "summary": "Theo encontra Sam no fim do corredor de estática e o traz de volta, vivo, com frio e com fome.",
+   "hint": "Theo: descubra o que aconteceu com Sam."
+  },
+  {
+   "id": "end_naomi",
+   "kind": "Personagem",
+   "title": "Margem do Lago",
+   "cutscene": "end_naomi",
+   "cond": {
+    "flag": "final_destroy",
+    "char": "naomi",
+    "deduction": "ded_iris2"
+   },
+   "summary": "Naomi devolve a mão que a salvou. Iris segura, e desta vez as duas saem do lago.",
+   "hint": "Naomi: descubra de quem eram as pegadas do lago."
+  },
+  {
+   "id": "end_survival",
+   "kind": "Sobrevivência",
+   "title": "Estrada 9",
+   "cutscene": "end_survival",
+   "cond": {
+    "flag": "final_flee"
+   },
+   "summary": "Você foge pela Estrada 9 até o rádio do carro ficar mudo. Ravenhill continua lá. O sinal também.",
+   "hint": "Às vezes sobreviver é ir embora."
+  },
+  {
+   "id": "end_main",
+   "kind": "Principal",
+   "title": "Silêncio",
+   "cutscene": "end_main",
+   "cond": {
+    "flag": "final_destroy"
+   },
+   "summary": "A torre cai. Os 41 se apagam como lâmpadas. Ravenhill acorda mais vazia — e livre.",
+   "hint": "Termine a transmissão."
+  }
+ ],
+ "radio": [
+  {
+   "text": "...sete... ponto... dezessete... não desliguem..."
+  },
+  {
+   "text": "...quarenta e um... quarenta e dois...",
+   "if": {
+    "chapter_min": 2
+   }
+  },
+  {
+   "text": "...Iris, se você me ouve, cante...",
+   "if": {
+    "chapter_min": 2
+   }
+  },
+  {
+   "text": "...filho? Elias? Se estiver ouvindo, não suba a colina...",
+   "if": {
+    "char": "elias"
+   }
+  },
+  {
+   "text": "...Theo... tá frio aqui embaixo... me busca...",
+   "if": {
+    "char": "theo"
+   }
+  },
+  {
+   "text": "...minha luz, volta pra casa antes de escurecer...",
+   "if": {
+    "char": "maya"
+   }
+  },
+  {
+   "text": "...você segurou minha mão... agora segura a dele...",
+   "if": {
+    "char": "naomi"
+   }
+  },
+  {
+   "text": "...café fresco às três... não conte para eles...",
+   "if": {
+    "chapter_min": 2
+   }
+  },
+  {
+   "text": "...a transmissão precisa de vozes novas...",
+   "if": {
+    "chapter_min": 3
+   }
+  },
+  {
+   "text": "...Marta, eu ainda estou aqui... (voz do delegado)...",
+   "if": {
+    "chapter_min": 2
+   }
+  }
+ ]
+}

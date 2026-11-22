@@ -1,0 +1,66 @@
+{
+ "hollow": {
+  "name": "Oco",
+  "form": "hollow",
+  "sight": 400,
+  "hearing": 300,
+  "speed": 48,
+  "chase_speed": 195,
+  "damage": 34,
+  "light_sensitive": true,
+  "height": 1.12,
+  "palette": {
+   "body": "15141a",
+   "eyes": "c8d6ff"
+  },
+  "desc": "Os levados pelo sinal. Corpos vazios que andam por onde andavam em vida."
+ },
+ "static": {
+  "name": "A Estática",
+  "form": "static",
+  "sight": 300,
+  "hearing": 200,
+  "speed": 60,
+  "chase_speed": 265,
+  "damage": 26,
+  "light_sensitive": false,
+  "height": 1.05,
+  "palette": {
+   "body": "2a2e3a",
+   "eyes": "e0e8ff"
+  },
+  "desc": "Aparece onde a luz falha. Vive entre um piscar e outro dos postes."
+ },
+ "listener": {
+  "name": "O Ouvinte",
+  "form": "listener",
+  "sight": 0,
+  "hearing": 620,
+  "speed": 40,
+  "chase_speed": 235,
+  "damage": 40,
+  "light_sensitive": false,
+  "height": 1.45,
+  "palette": {
+   "body": "121014",
+   "eyes": "ff4030"
+  },
+  "desc": "Cego. A espinha é feita de antenas. Ouve um coração acelerado através de paredes."
+ },
+ "maestro": {
+  "name": "O Maestro",
+  "form": "conductor",
+  "sight": 2000,
+  "hearing": 2000,
+  "speed": 60,
+  "chase_speed": 150,
+  "damage": 30,
+  "light_sensitive": false,
+  "height": 1.35,
+  "palette": {
+   "body": "0b0a0d",
+   "eyes": "ff2a20"
+  },
+  "desc": "Aurelio Halvorsen. O homem que se recusou a terminar a transmissão."
+ }
+}

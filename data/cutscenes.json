@@ -1,0 +1,2795 @@
+{
+ "prologue": {
+  "steps": [
+   {
+    "c": "player_visible",
+    "on": false
+   },
+   {
+    "c": "card",
+    "text": "31 de outubro de 1979",
+    "sub": "Hospital Santa Inês — Ravenhill",
+    "t": 2.6
+   },
+   {
+    "c": "location",
+    "id": "hospital_ext",
+    "x": 1250
+   },
+   {
+    "c": "time",
+    "h": 23.5
+   },
+   {
+    "c": "rain",
+    "on": true
+   },
+   {
+    "c": "cam",
+    "x": 1250,
+    "zoom": 1.0,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "sfx",
+    "name": "radio_on"
+   },
+   {
+    "c": "radio",
+    "text": "...KRVN, sete ponto dezessete... Iris, se você me ouve, cante..."
+   },
+   {
+    "c": "cam",
+    "x": 1250,
+    "zoom": 1.35,
+    "t": 3.0
+   },
+   {
+    "c": "glitch",
+    "v": 0.7
+   },
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "flicker",
+    "t": 2.0
+   },
+   {
+    "c": "wait",
+    "t": 0.6
+   },
+   {
+    "c": "flash",
+    "color": "ff5a2a",
+    "t": 1.6
+   },
+   {
+    "c": "shake",
+    "amp": 16
+   },
+   {
+    "c": "sfx",
+    "name": "stinger"
+   },
+   {
+    "c": "glitch",
+    "v": 0.0
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Naquela noite, o transmissor escondido no subsolo do Santa Inês sobrecarregou. Quarenta e uma pessoas não saíram do prédio.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "A cidade fez uma placa, uma missa, e um esforço enorme para esquecer.",
+    "expr": "neutral"
+   },
+   {
+    "c": "flash",
+    "color": "ff3a1a",
+    "t": 2.0
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "card",
+    "text": "Vinte e cinco anos depois.",
+    "sub": "",
+    "t": 2.4
+   },
+   {
+    "c": "player_visible",
+    "on": true
+   }
+  ]
+ },
+ "opening_elias": {
+  "steps": [
+   {
+    "c": "cutscene",
+    "id": "prologue"
+   },
+   {
+    "c": "location",
+    "id": "casa_vance",
+    "x": 760
+   },
+   {
+    "c": "time",
+    "h": 16.5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.25,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Vinte e um dias. O xerife diz que pai nenhum fica vinte e um dias fora sem motivo, a não ser que queira.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Ele deixou o ferro de solda ligado. Quem quer ir embora não deixa o ferro de solda ligado.",
+    "expr": "neutral"
+   },
+   {
+    "c": "sfx",
+    "name": "radio_on"
+   },
+   {
+    "c": "amb",
+    "key": "static",
+    "v": 0.4
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.45,
+    "t": 1.0
+   },
+   {
+    "c": "radio",
+    "text": "...li...as... sete... ponto..."
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "fear"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Pai?!",
+    "expr": "scared"
+   },
+   {
+    "c": "amb",
+    "key": "static",
+    "v": 0.0
+   },
+   {
+    "c": "wait",
+    "t": 0.5
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "...Só chiado. De novo. O Sr. Greer da loja de rádios era amigo dele. Se alguém sabe o que é 7.17, é ele.",
+    "expr": "neutral"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 1.0
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 1",
+    "sub": "Frequência Morta",
+    "t": 2.4
+   }
+  ]
+ },
+ "opening_maya": {
+  "steps": [
+   {
+    "c": "cutscene",
+    "id": "prologue"
+   },
+   {
+    "c": "location",
+    "id": "casa_cordeiro",
+    "x": 640
+   },
+   {
+    "c": "time",
+    "h": 16.5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.25,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Revelei o filme da semana. Trinta e uma fotos minhas. E uma que eu nunca tirei.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "A vó, na frente do Santa Inês, em 1979. Com o mesmo cardigã que está usando agora. A mesma cara.",
+    "expr": "scared"
+   },
+   {
+    "c": "face",
+    "who": "player",
+    "dir": 1
+   },
+   {
+    "c": "say",
+    "who": "lucia",
+    "text": "Minha luz? Já chegou? O rádio ficou chamando a tarde inteira. Uns nomes estranhos.",
+    "expr": "smile"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "...Já vou, vó.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Jornalismo começa com uma pergunta que ninguém quer responder. A minha é: quem é a minha avó?",
+    "expr": "neutral"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 1.0
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 1",
+    "sub": "Frequência Morta",
+    "t": 2.4
+   }
+  ]
+ },
+ "opening_theo": {
+  "steps": [
+   {
+    "c": "cutscene",
+    "id": "prologue"
+   },
+   {
+    "c": "location",
+    "id": "hospital_lobby",
+    "x": 420
+   },
+   {
+    "c": "time",
+    "h": 16.5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.25,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Fim do plantão de dia. Começo do turno que eu realmente vim fazer.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Faz um ano que o Sam sumiu. Faz um ano que os pacientes do leito 4 falam de um garoto de moletom vermelho.",
+    "expr": "sad"
+   },
+   {
+    "c": "flicker",
+    "t": 1.5
+   },
+   {
+    "c": "sfx",
+    "name": "whisper",
+    "vol": 0.7
+   },
+   {
+    "c": "radio",
+    "text": "...Theo... tá frio aqui embaixo..."
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "fear"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Isso veio da escada do subsolo.",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Primeiro o prontuário do leito 4. Depois eu descubro quem anda assinando como 'C. Wynn'.",
+    "expr": "neutral"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 1.0
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 1",
+    "sub": "Frequência Morta",
+    "t": 2.4
+   }
+  ]
+ },
+ "opening_naomi": {
+  "steps": [
+   {
+    "c": "cutscene",
+    "id": "prologue"
+   },
+   {
+    "c": "location",
+    "id": "posto",
+    "x": 560
+   },
+   {
+    "c": "time",
+    "h": 16.5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.25,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Bomba dois pingando, fusível queimado, e o Benny jurando que o rádio da loja ligou sozinho de madrugada.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Eu não disse pra ele que vi as pegadas. Molhadas. Saindo da estrada, passando pelo posto e subindo a colina.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Pés pequenos. Iguais aos que eu vi no fundo do lago quando tinha nove anos.",
+    "expr": "scared"
+   },
+   {
+    "c": "sfx",
+    "name": "radio_on"
+   },
+   {
+    "c": "radio",
+    "text": "...você segurou minha mão..."
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Não. Não hoje.",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "O Benny pediu pra levar uma peça para o velho Greer, na cidade. Bom motivo pra sair daqui antes de escurecer.",
+    "expr": "neutral"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 1.0
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 1",
+    "sub": "Frequência Morta",
+    "t": 2.4
+   }
+  ]
+ },
+ "ch2_intro": {
+  "steps": [
+   {
+    "c": "location",
+    "id": "diner",
+    "x": 600
+   },
+   {
+    "c": "time",
+    "h": 9.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 2",
+    "sub": "Café às Três",
+    "t": 2.4
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Bom dia, querida. Dormiu? Não? Ninguém dormiu essa noite.",
+    "expr": "smile"
+   }
+  ]
+ },
+ "ch3_intro": {
+  "steps": [
+   {
+    "c": "location",
+    "id": "hospital_ext",
+    "x": 1100
+   },
+   {
+    "c": "time",
+    "h": 10.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 3",
+    "sub": "Santa Inês",
+    "t": 2.4
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Edith disse que a Clara faz a ronda da noite. Até lá, preciso de um jeito de descer ao subsolo.",
+    "expr": "neutral"
+   }
+  ]
+ },
+ "ch4_intro": {
+  "steps": [
+   {
+    "c": "location",
+    "id": "rua_corvo",
+    "x": 2600
+   },
+   {
+    "c": "time",
+    "h": 18.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 4",
+    "sub": "A Casa Halvorsen",
+    "t": 2.4
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Halvorsen. O nome está em tudo. Na foto, no transmissor, no vitral da igreja. E a casa dele fica no fim desta rua.",
+    "expr": "neutral"
+   }
+  ]
+ },
+ "ch5_intro": {
+  "steps": [
+   {
+    "c": "location",
+    "id": "hospital_ext",
+    "x": 2300
+   },
+   {
+    "c": "time",
+    "h": 22.0
+   },
+   {
+    "c": "rain",
+    "on": true
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "storm"
+    }
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "card",
+    "text": "CAPÍTULO 5",
+    "sub": "O Último Sinal",
+    "t": 2.4
+   },
+   {
+    "c": "lightning"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "A torre está transmitindo sem parar. É agora ou nunca.",
+    "expr": "neutral"
+   }
+  ]
+ },
+ "ch1_swing": {
+  "steps": [
+   {
+    "c": "cam",
+    "x": 900,
+    "zoom": 1.25,
+    "t": 1.6
+   },
+   {
+    "c": "amb",
+    "key": "static",
+    "v": 0.5
+   },
+   {
+    "c": "sfx",
+    "name": "radio_on"
+   },
+   {
+    "c": "radio",
+    "text": "...sete... ponto... dezessete... não desliguem..."
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "O rádio pegou sozinho. E o balanço... está se mexendo.",
+    "expr": "scared"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "met": "iris"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "iris",
+      "text": "Você voltou.",
+      "expr": "smile"
+     }
+    ],
+    "else": [
+     {
+      "c": "say",
+      "who": "iris",
+      "text": "Você também está ouvindo a música?",
+      "expr": "neutral"
+     },
+     {
+      "c": "effects",
+      "do": {
+       "met": "iris"
+      }
+     }
+    ]
+   },
+   {
+    "c": "glitch",
+    "v": 0.6
+   },
+   {
+    "c": "flicker",
+    "t": 3.0
+   },
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Corre. Ele mandou os vazios buscarem quem escuta.",
+    "expr": "scared"
+   },
+   {
+    "c": "glitch",
+    "v": 0.0
+   },
+   {
+    "c": "spawn",
+    "who": "hollow",
+    "face": -1,
+    "ghost": false,
+    "dx": 520
+   },
+   {
+    "c": "cam",
+    "on": "hollow",
+    "zoom": 1.4,
+    "t": 0.8
+   },
+   {
+    "c": "sfx",
+    "name": "stinger"
+   },
+   {
+    "c": "shake",
+    "amp": 10
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "O que... é aquilo...",
+    "expr": "scared"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.5
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Correr. Esconder. O Marlowe's fica aberto a noite toda.",
+    "expr": "scared"
+   },
+   {
+    "c": "despawn",
+    "who": "hollow",
+    "fade": false
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "heard_717"
+    }
+   },
+   {
+    "c": "refresh"
+   },
+   {
+    "c": "amb",
+    "key": "static",
+    "v": 0.0
+   },
+   {
+    "c": "card",
+    "text": "",
+    "sub": "Segure CORRER para fugir. Esconda-se em arbustos e caçambas. Lanterna atrai os Ocos.",
+    "t": 2.6
+   }
+  ]
+ },
+ "ch1_end": {
+  "steps": [
+   {
+    "c": "time",
+    "h": 3.0
+   },
+   {
+    "c": "cam",
+    "x": 1000,
+    "zoom": 1.2,
+    "t": 1.0
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Entra, entra! Fecha a porta. Ninguém vem atrás de você aqui dentro — eles não entram onde tem café quente.",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Tinha uma coisa na praça. Sem rosto.",
+    "expr": "scared",
+    "by_char": {
+     "elias": "Tinha uma coisa na praça. E o rádio do meu pai disse meu nome.",
+     "theo": "Eu já vi gente morrer no plantão. Aquilo não estava vivo nem morto."
+    }
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Os vazios. Os que foram levados. Andam por onde andavam em vida.",
+    "expr": "sad"
+   },
+   {
+    "c": "choice",
+    "prompt": "Como você reage?",
+    "who": "player",
+    "options": [
+     {
+      "text": "Contar tudo para Edith.",
+      "do": {
+       "trust": {
+        "edith": 1
+       }
+      },
+      "then": [
+       {
+        "c": "say",
+        "who": "edith",
+        "text": "Você é corajosa, querida. Mas coragem demais aqui é perigoso.",
+        "expr": "sad",
+        "by_char": {
+         "elias": "Você é igual ao seu pai. Ele também me contava tudo.",
+         "theo": "Você é corajoso, rapaz. Mas coragem demais aqui é perigoso."
+        }
+       }
+      ]
+     },
+     {
+      "text": "Perguntar como ela sabe disso.",
+      "do": {
+       "set": "suspect_edith"
+      },
+      "then": [
+       {
+        "c": "say",
+        "who": "edith",
+        "text": "...Eu sirvo café em Ravenhill há muito tempo. A gente ouve coisas.",
+        "expr": "neutral"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Senta. Bebe. Amanhece daqui a pouco.",
+    "expr": "smile"
+   },
+   {
+    "c": "effects",
+    "do": {
+     "heal": 40
+    }
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "time",
+    "h": 9.0
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "ch1_done"
+    }
+   },
+   {
+    "c": "chapter",
+    "n": 2
+   },
+   {
+    "c": "wait",
+    "t": 0.6
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Ela serve café há muito tempo. Quanto tempo?",
+    "expr": "neutral"
+   }
+  ]
+ },
+ "ch2_edith": {
+  "steps": [
+   {
+    "c": "cam",
+    "x": 1000,
+    "zoom": 1.3,
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Uma e pouco da manhã. Você veio. Eu prometi contar o que pudesse.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Eu morri no dia trinta e um de outubro de setenta e nove. Fui levar café para os plantonistas do Santa Inês.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Acordei atrás do balcão no dia seguinte. E no outro. E no outro. Por vinte e cinco anos.",
+    "expr": "sad"
+   },
+   {
+    "c": "flicker",
+    "t": 1.0
+   },
+   {
+    "c": "choice",
+    "prompt": "Edith olha para você, esperando.",
+    "who": "edith",
+    "options": [
+     {
+      "text": "Você é uma assombração. Esta cidade precisa saber.",
+      "do": {
+       "trust": {
+        "edith": -3
+       },
+       "set": "edith_accused"
+      },
+      "then": [
+       {
+        "c": "ghost",
+        "who": "edith",
+        "on": true
+       },
+       {
+        "c": "sfx",
+        "name": "glitch"
+       },
+       {
+        "c": "say",
+        "who": "edith",
+        "text": "Então conte. E veja quantos vão acreditar.",
+        "expr": "neutral"
+       },
+       {
+        "c": "ghost",
+        "who": "edith",
+        "on": false
+       }
+      ]
+     },
+     {
+      "text": "Seu segredo está seguro comigo.",
+      "do": {
+       "trust": {
+        "edith": 3
+       },
+       "set": "edith_secret"
+      },
+      "then": [
+       {
+        "c": "say",
+        "who": "edith",
+        "text": "...Obrigada. Você não sabe o que é ser invisível por dentro.",
+        "expr": "smile"
+       }
+      ]
+     },
+     {
+      "text": "Quantos de vocês existem?",
+      "do": {
+       "trust": {
+        "edith": 1
+       },
+       "give": "edith_testemunho"
+      },
+      "then": [
+       {
+        "c": "say",
+        "who": "edith",
+        "text": "Quarenta e um. Alguns sabem. Os que não sabem são os mais felizes. Não tire isso deles à toa.",
+        "expr": "sad"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Uma coisa, querida: o sinal não é nosso. Nós só ficamos presos nele. Quem segura a ponta é outro.",
+    "expr": "neutral"
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "edith_confronted"
+    }
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "time",
+    "h": 10.0
+   },
+   {
+    "c": "chapter",
+    "n": 3
+   },
+   {
+    "c": "wait",
+    "t": 0.5
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   }
+  ]
+ },
+ "kessler_marta": {
+  "steps": [
+   {
+    "c": "cam",
+    "x": 1580,
+    "zoom": 1.35,
+    "t": 1.4
+   },
+   {
+    "c": "say",
+    "who": "kessler",
+    "text": "Mais uma noite, Marta. Só mais uma. Eu arquivo o que precisar.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "marta",
+    "text": "Roy... eu não lembro o caminho de casa.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "kessler",
+    "text": "Eu lembro por nós dois.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "O delegado está conversando com uma mulher que... não faz sombra no chão molhado.",
+    "expr": "scared"
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "saw_marta"
+    }
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.8
+   }
+  ]
+ },
+ "ch3_listener": {
+  "steps": [
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "glitch",
+    "v": 0.8
+   },
+   {
+    "c": "shake",
+    "amp": 14
+   },
+   {
+    "c": "wait",
+    "t": 0.4
+   },
+   {
+    "c": "glitch",
+    "v": 0.0
+   },
+   {
+    "c": "refresh"
+   },
+   {
+    "c": "cam",
+    "x": 1700,
+    "zoom": 1.2,
+    "t": 1.6
+   },
+   {
+    "c": "sfx",
+    "name": "creature"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Alguma coisa desceu do teto. Alta demais. Sem olhos. A espinha... são antenas.",
+    "expr": "scared"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.8
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Não corre. Ela ouve. Abaixa e anda devagar até a escada.",
+    "expr": "scared",
+    "by_char": {
+     "theo": "Respira, Theo. Igual no plantão. Abaixa e anda devagar até a escada."
+    }
+   },
+   {
+    "c": "card",
+    "text": "",
+    "sub": "Agachado (C) você quase não faz barulho. O Ouvinte é cego.",
+    "t": 2.4
+   }
+  ]
+ },
+ "ch3_end": {
+  "steps": [
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.15,
+    "t": 0.8
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Saí. Saí...",
+    "expr": "scared"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "night": true
+    },
+    "then": [
+     {
+      "c": "spawn",
+      "who": "clara",
+      "face": 1,
+      "ghost": false,
+      "dx": -260
+     },
+     {
+      "c": "say",
+      "who": "clara",
+      "text": "Você viu o transmissor. Então sabe que ele ainda está ligado.",
+      "expr": "neutral"
+     },
+     {
+      "c": "say",
+      "who": "clara",
+      "text": "Vá à Casa Halvorsen. É de lá que ele puxa a ponta do fio.",
+      "expr": "neutral",
+      "by_char": {
+       "theo": "O Sam está preso no sinal, Theo. Para soltá-lo, você vai ter que puxar o fio inteiro. Comece pela Casa Halvorsen."
+      }
+     },
+     {
+      "c": "despawn",
+      "who": "clara"
+     }
+    ],
+    "else": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Preciso ligar essas notas a alguma coisa. Halvorsen... a foto do Marlowe's?",
+      "expr": "neutral"
+     }
+    ]
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "escaped_subsolo"
+    }
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "time",
+    "h": 18.0
+   },
+   {
+    "c": "chapter",
+    "n": 4
+   },
+   {
+    "c": "wait",
+    "t": 0.5
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   }
+  ]
+ },
+ "ch4_jonah": {
+  "steps": [
+   {
+    "c": "sfx",
+    "name": "creature"
+   },
+   {
+    "c": "shake",
+    "amp": 8
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.2,
+    "t": 0.6
+   },
+   {
+    "c": "spawn",
+    "who": "jonah",
+    "face": 1,
+    "ghost": false,
+    "dx": -380
+   },
+   {
+    "c": "say",
+    "who": "jonah",
+    "text": "Eu disse que vinha! Eu disse!",
+    "expr": "scared"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "flag": "jonah_stays"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Eu mandei você ficar lá fora!",
+      "expr": "scared"
+     }
+    ],
+    "else": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Fica atrás de mim!",
+      "expr": "scared"
+     }
+    ]
+   },
+   {
+    "c": "spawn",
+    "who": "hollow",
+    "face": -1,
+    "ghost": false,
+    "dx": 420
+   },
+   {
+    "c": "sfx",
+    "name": "stinger"
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.4,
+    "t": 0.6
+   },
+   {
+    "c": "flicker",
+    "t": 2.0
+   },
+   {
+    "c": "say",
+    "who": "jonah",
+    "text": "Tem dois! Tem DOIS!",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "A bobina principal está no transmissor. Se eu pegar, talvez dê para desligar tudo depois. Mas o Jonah...",
+    "expr": "scared"
+   },
+   {
+    "c": "choice",
+    "prompt": "Não dá tempo para os dois.",
+    "who": "player",
+    "options": [
+     {
+      "text": "Puxar o Jonah e correr.",
+      "do": {
+       "set": "jonah_saved",
+       "trust": {
+        "jonah": 2
+       }
+      },
+      "then": [
+       {
+        "c": "move",
+        "who": "player",
+        "speed": 300,
+        "wait": false,
+        "dx": -200
+       },
+       {
+        "c": "move",
+        "who": "jonah",
+        "speed": 320,
+        "wait": true,
+        "dx": -500
+       },
+       {
+        "c": "say",
+        "who": "jonah",
+        "text": "Você... largou a bobina por mim?",
+        "expr": "sad"
+       },
+       {
+        "c": "say",
+        "who": "player",
+        "text": "Corre, Jonah!",
+        "expr": "scared"
+       }
+      ]
+     },
+     {
+      "text": "Pegar a bobina.",
+      "do": {
+       "set": "jonah_taken",
+       "give": "bobina_lamparina"
+      },
+      "then": [
+       {
+        "c": "anim",
+        "who": "player",
+        "name": "inspect"
+       },
+       {
+        "c": "sfx",
+        "name": "glitch"
+       },
+       {
+        "c": "move",
+        "who": "hollow",
+        "speed": 260,
+        "wait": false,
+        "dx": -300
+       },
+       {
+        "c": "say",
+        "who": "jonah",
+        "text": "ESPERA! NÃO ME DEIXA—",
+        "expr": "scared"
+       },
+       {
+        "c": "flash",
+        "color": "000000",
+        "t": 1.0
+       },
+       {
+        "c": "despawn",
+        "who": "jonah",
+        "fade": false
+       },
+       {
+        "c": "say",
+        "who": "player",
+        "text": "Jonah... JONAH!",
+        "expr": "scared"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "despawn",
+    "who": "hollow",
+    "fade": false
+   },
+   {
+    "c": "despawn",
+    "who": "jonah",
+    "fade": false
+   },
+   {
+    "c": "location",
+    "id": "rua_corvo",
+    "x": 2700
+   },
+   {
+    "c": "time",
+    "h": 21.5
+   },
+   {
+    "c": "rain",
+    "on": true
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": [
+      "storm",
+      "ch4_done"
+     ]
+    }
+   },
+   {
+    "c": "chapter",
+    "n": 5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "lightning"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "flag": "jonah_saved"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "O Jonah foi para casa. Prometeu trancar a porta e tirar o rádio da tomada.",
+      "expr": "sad"
+     }
+    ],
+    "else": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Eu escolhi uma fita em vez de uma pessoa. Se eu desligar o sinal... talvez ele volte.",
+      "expr": "sad"
+     }
+    ]
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "A torre está acesa em cima da colina. A trilha fica atrás do Hospital Geral.",
+    "expr": "neutral"
+   }
+  ]
+ },
+ "ch5_maestro": {
+  "steps": [
+   {
+    "c": "cam",
+    "x": 1300,
+    "zoom": 1.15,
+    "t": 1.2
+   },
+   {
+    "c": "spawn",
+    "who": "abel",
+    "face": -1,
+    "ghost": false,
+    "x": 1400
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Mocidade. Eu disse que a colina chamava você.",
+    "expr": "smile"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "flag": "know_maestro"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Aurelio Halvorsen.",
+      "expr": "neutral"
+     },
+     {
+      "c": "say",
+      "who": "abel",
+      "text": "Ninguém me chama assim há vinte e cinco anos. Nem eu mesmo.",
+      "expr": "smile"
+     }
+    ],
+    "else": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Sr. Abel? O que o senhor está fazendo aqui?",
+      "expr": "scared"
+     },
+     {
+      "c": "say",
+      "who": "abel",
+      "text": "Abel. Aurelio. Que diferença faz um nome para uma voz?",
+      "expr": "smile"
+     }
+    ]
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Minha filha cantava no meu rádio. Eu só queria que a música não acabasse. Precisava de um coral para segurar a voz dela.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Você tem um bom ouvido. Seria uma voz linda.",
+    "expr": "smile",
+    "by_char": {
+     "elias": "Seu pai tem o melhor ouvido que já encontrei. Ele está lá em cima, afinando o coral. Você pode ficar com ele.",
+     "theo": "O seu irmão canta comigo agora. Fica com a gente, enfermeiro. Ninguém mais precisa morrer.",
+     "maya": "A Lúcia canta tão bem. Ela vai cuidar de você para sempre, minha luz.",
+     "naomi": "Você ficou três minutos comigo no lago, menina. Esqueceu? Ainda tem um lugar para você."
+    }
+   },
+   {
+    "c": "flash",
+    "color": "ff2a1a",
+    "t": 1.2
+   },
+   {
+    "c": "glitch",
+    "v": 0.9
+   },
+   {
+    "c": "sfx",
+    "name": "creature"
+   },
+   {
+    "c": "shake",
+    "amp": 18
+   },
+   {
+    "c": "despawn",
+    "who": "abel",
+    "fade": false
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "maestro_awake"
+    }
+   },
+   {
+    "c": "refresh"
+   },
+   {
+    "c": "glitch",
+    "v": 0.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.5
+   },
+   {
+    "c": "card",
+    "text": "",
+    "sub": "Ative os três relés da torre. Esconda-se nos gabinetes quando ele chegar perto.",
+    "t": 2.6
+   }
+  ]
+ },
+ "ch5_final": {
+  "steps": [
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "shake",
+    "amp": 20
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 1.0
+   },
+   {
+    "c": "despawn",
+    "who": "maestro",
+    "fade": false
+   },
+   {
+    "c": "spawn",
+    "who": "abel",
+    "face": -1,
+    "ghost": false,
+    "dx": 320
+   },
+   {
+    "c": "ghost",
+    "who": "abel",
+    "on": true
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.3,
+    "t": 1.0
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Não... a transmissão... ela vai parar de cantar...",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Ela parou há vinte e cinco anos. Você que não deixou ela ir.",
+    "expr": "neutral"
+   },
+   {
+    "c": "choice",
+    "prompt": "O transmissor principal está na sua frente. A decisão é sua.",
+    "who": "player",
+    "options": [
+     {
+      "text": "Destruir o transmissor.",
+      "do": {
+       "set": "final_destroy"
+      },
+      "then": []
+     },
+     {
+      "text": "Chamar a Iris pelo rádio.",
+      "if": {
+       "flag": "iris_trusted",
+       "deduction": "ded_iris"
+      },
+      "do": {
+       "set": "final_iris"
+      },
+      "then": []
+     },
+     {
+      "text": "Assumir o microfone (manter o sinal).",
+      "if": {
+       "evidence": "bobina_lamparina"
+      },
+      "do": {
+       "set": "final_keep"
+      },
+      "then": []
+     },
+     {
+      "text": "Largar tudo e fugir pela Estrada 9.",
+      "do": {
+       "set": "final_flee"
+      },
+      "then": []
+     },
+     {
+      "text": "Aceitar o convite. Ficar com eles.",
+      "do": {
+       "set": "final_join"
+      },
+      "then": []
+     }
+    ]
+   },
+   {
+    "c": "effects",
+    "do": {
+     "set": "final_done"
+    }
+   },
+   {
+    "c": "resolve_ending"
+   }
+  ]
+ },
+ "end_true": {
+  "steps": [
+   {
+    "c": "sfx",
+    "name": "radio_on"
+   },
+   {
+    "c": "radio",
+    "text": "...papai? Eu estou ouvindo você. Pode desligar agora."
+   },
+   {
+    "c": "spawn",
+    "who": "iris",
+    "face": 1,
+    "ghost": false,
+    "dx": -200
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Papai. Pode desligar. Eu já cantei a última.",
+    "expr": "smile"
+   },
+   {
+    "c": "ghost",
+    "who": "abel",
+    "on": false
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Iris... você está tão fria.",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Vamos para casa juntos. Todos nós.",
+    "expr": "smile"
+   },
+   {
+    "c": "move",
+    "who": "abel",
+    "speed": 60,
+    "wait": true,
+    "dx": -150
+   },
+   {
+    "c": "flash",
+    "color": "fff2d0",
+    "t": 2.5
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "despawn",
+    "who": "iris"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "rua_corvo",
+    "x": 1700
+   },
+   {
+    "c": "time",
+    "h": 6.0
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.0,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "spawn",
+    "who": "jonah",
+    "face": -1,
+    "ghost": false,
+    "dx": 250
+   },
+   {
+    "c": "say",
+    "who": "jonah",
+    "text": "Amanheceu! E... olha quem está descendo a rua.",
+    "expr": "smile"
+   },
+   {
+    "c": "if",
+    "cond": {
+     "char": "elias"
+    },
+    "then": [
+     {
+      "c": "spawn",
+      "who": "daniel",
+      "face": 1,
+      "ghost": false,
+      "dx": -420
+     },
+     {
+      "c": "say",
+      "who": "daniel",
+      "text": "Elias. Eu ouvi você o tempo todo.",
+      "expr": "sad"
+     },
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Pai.",
+      "expr": "sad"
+     }
+    ],
+    "else": []
+   },
+   {
+    "c": "if",
+    "cond": {
+     "char": "theo"
+    },
+    "then": [
+     {
+      "c": "spawn",
+      "who": "sam",
+      "face": 1,
+      "ghost": false,
+      "dx": -420
+     },
+     {
+      "c": "say",
+      "who": "sam",
+      "text": "Theo? Que dia é hoje? Tô com uma fome...",
+      "expr": "sad"
+     },
+     {
+      "c": "say",
+      "who": "player",
+      "text": "Um ano, Sam. Um ano. Vem cá.",
+      "expr": "sad"
+     }
+    ],
+    "else": []
+   },
+   {
+    "c": "if",
+    "cond": {
+     "char": "maya"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "A vó foi com eles. Deixou o tricô terminado no sofá. Um cachecol. Com meu nome.",
+      "expr": "sad"
+     }
+    ],
+    "else": []
+   },
+   {
+    "c": "if",
+    "cond": {
+     "char": "naomi"
+    },
+    "then": [
+     {
+      "c": "say",
+      "who": "player",
+      "text": "As pegadas sumiram. Pela primeira vez em treze anos, eu não vejo nada. É bom. É silencioso.",
+      "expr": "smile"
+     }
+    ],
+    "else": []
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Os sete levados voltaram para casa com frio e sem memória das últimas semanas. Os quarenta e um partiram juntos.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Na Praça Memorial, alguém completou o nome raspado da placa: IRIS HALVORSEN, 8 anos.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL VERDADEIRO",
+    "sub": "Ravenhill Acorda",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_true"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_hidden": {
+  "steps": [
+   {
+    "c": "spawn",
+    "who": "iris",
+    "face": 1,
+    "ghost": false,
+    "dx": -200
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Papai. Pode desligar.",
+    "expr": "smile"
+   },
+   {
+    "c": "ghost",
+    "who": "abel",
+    "on": false
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "...Está bem, minha flor.",
+    "expr": "sad"
+   },
+   {
+    "c": "flash",
+    "color": "cfe0ff",
+    "t": 2.5
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "despawn",
+    "who": "iris"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "praca",
+    "x": 1400
+   },
+   {
+    "c": "time",
+    "h": 5.5
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Eles foram. Quase todos.",
+    "expr": "sad"
+   },
+   {
+    "c": "spawn",
+    "who": "hollow",
+    "face": -1,
+    "ghost": false,
+    "dx": 500
+   },
+   {
+    "c": "ghost",
+    "who": "hollow",
+    "on": true
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Alguns ficaram. Os que eu não reconheci. Sem sinal para segurar, eles só... vagam.",
+    "expr": "scared"
+   },
+   {
+    "c": "card",
+    "text": "FINAL SOBRENATURAL OCULTO",
+    "sub": "Os Quarenta e Um",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_hidden"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_bad": {
+  "steps": [
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Bem-vindo ao coral.",
+    "expr": "smile"
+   },
+   {
+    "c": "glitch",
+    "v": 1.0
+   },
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "fear"
+   },
+   {
+    "c": "flash",
+    "color": "ff1a1a",
+    "t": 1.5
+   },
+   {
+    "c": "shake",
+    "amp": 20
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "glitch",
+    "v": 0.0
+   },
+   {
+    "c": "location",
+    "id": "rua_corvo",
+    "x": 1980
+   },
+   {
+    "c": "time",
+    "h": 3.0
+   },
+   {
+    "c": "cam",
+    "x": 1980,
+    "zoom": 1.3,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Três da manhã. Na Rua do Corvo, uma janela acende. Um rádio liga sozinho.",
+    "expr": "neutral"
+   },
+   {
+    "c": "radio",
+    "text": "...trinta e nove... quarenta... quarenta e um... quarenta e dois..."
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "A voz nova é a sua.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL RUIM",
+    "sub": "Eco",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_bad"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_secret": {
+  "steps": [
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Ninguém mais vai ser levado. Mas ninguém vai embora também.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Você... vai segurar a ponta?",
+    "expr": "scared"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Vou. Do meu jeito. Sem vozes novas.",
+    "expr": "neutral"
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "diner",
+    "x": 1000
+   },
+   {
+    "c": "time",
+    "h": 3.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "edith",
+    "text": "Café às três, como sempre. Por conta da casa — para a nova dona da rádio.",
+    "expr": "smile",
+    "by_char": {
+     "elias": "Café às três, como sempre. Por conta da casa — para o novo dono da rádio.",
+     "theo": "Café às três, como sempre. Por conta da casa — para o novo dono da rádio."
+    }
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Ravenhill nunca mais perdeu ninguém. E nunca mais deixou ninguém partir.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL SECRETO",
+    "sub": "Transmissão",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_secret"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_elias": {
+  "steps": [
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "shake",
+    "amp": 24
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 2.0
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "spawn",
+    "who": "daniel",
+    "face": -1,
+    "ghost": false,
+    "dx": 380
+   },
+   {
+    "c": "anim",
+    "who": "daniel",
+    "name": "hurt"
+   },
+   {
+    "c": "say",
+    "who": "daniel",
+    "text": "...Elias? Você subiu a colina? Eu disse para não subir...",
+    "expr": "sad"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Você deixou o ferro de solda ligado, pai. Eu precisava vir desligar.",
+    "expr": "sad"
+   },
+   {
+    "c": "move",
+    "who": "player",
+    "speed": 200,
+    "wait": true,
+    "dx": 300
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "rua_corvo",
+    "x": 600
+   },
+   {
+    "c": "time",
+    "h": 6.5
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "spawn",
+    "who": "daniel",
+    "face": -1,
+    "ghost": false,
+    "dx": 120
+   },
+   {
+    "c": "say",
+    "who": "daniel",
+    "text": "O walkie-talkie. Pode jogar fora.",
+    "expr": "smile"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Vou guardar. Agora ele está mudo.",
+    "expr": "smile"
+   },
+   {
+    "c": "card",
+    "text": "FINAL DE PERSONAGEM",
+    "sub": "A Voz do Pai",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_elias"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_maya": {
+  "steps": [
+   {
+    "c": "shake",
+    "amp": 24
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 2.0
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "casa_cordeiro",
+    "x": 1000
+   },
+   {
+    "c": "time",
+    "h": 6.0
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.2,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "lucia",
+    "text": "Minha luz. Está amanhecendo. Eu acho que agora eu posso ir dormir.",
+    "expr": "smile"
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "sfx",
+    "name": "photo"
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 0.4
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Uma última foto, vó.",
+    "expr": "sad"
+   },
+   {
+    "c": "ghost",
+    "who": "lucia",
+    "on": true
+   },
+   {
+    "c": "say",
+    "who": "lucia",
+    "text": "Publique a verdade. Mas escreva bonito.",
+    "expr": "smile"
+   },
+   {
+    "c": "despawn",
+    "who": "lucia",
+    "t": 2.0
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "THE RAVENHILL ECHO — Edição especial: 'OS 41 DE SANTA INÊS FINALMENTE DESCANSAM'. Por Maya Cordeiro.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL DE PERSONAGEM",
+    "sub": "Primeira Página",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_maya"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_theo": {
+  "steps": [
+   {
+    "c": "shake",
+    "amp": 24
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 2.0
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "spawn",
+    "who": "sam",
+    "face": -1,
+    "ghost": false,
+    "dx": 420
+   },
+   {
+    "c": "anim",
+    "who": "sam",
+    "name": "fear"
+   },
+   {
+    "c": "say",
+    "who": "sam",
+    "text": "Theo? Tá tudo chiando... eu tava num corredor que não acabava...",
+    "expr": "scared"
+   },
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Pulso fraco, hipotermia leve. Você vai ficar bem. Eu tô de plantão.",
+    "expr": "sad"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "hospital_lobby",
+    "x": 1250
+   },
+   {
+    "c": "time",
+    "h": 7.0
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "spawn",
+    "who": "sam",
+    "face": 1,
+    "ghost": false,
+    "dx": 0
+   },
+   {
+    "c": "anim",
+    "who": "sam",
+    "name": "idle"
+   },
+   {
+    "c": "say",
+    "who": "sam",
+    "text": "Leito 4. Engraçado. Os outros pacientes dizem que eu já estive aqui.",
+    "expr": "smile"
+   },
+   {
+    "c": "card",
+    "text": "FINAL DE PERSONAGEM",
+    "sub": "Plantão Final",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_theo"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_naomi": {
+  "steps": [
+   {
+    "c": "shake",
+    "amp": 24
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 2.0
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "estrada9",
+    "x": 2300
+   },
+   {
+    "c": "time",
+    "h": 5.8
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "zoom": 1.2,
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "spawn",
+    "who": "iris",
+    "face": -1,
+    "ghost": false,
+    "dx": 180
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Você voltou para o lago.",
+    "expr": "smile"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Você segurou minha mão uma vez. Agora é minha vez.",
+    "expr": "sad"
+   },
+   {
+    "c": "move",
+    "who": "player",
+    "speed": 80,
+    "wait": true,
+    "dx": 150
+   },
+   {
+    "c": "ghost",
+    "who": "iris",
+    "on": true
+   },
+   {
+    "c": "say",
+    "who": "iris",
+    "text": "Não está mais frio.",
+    "expr": "smile"
+   },
+   {
+    "c": "despawn",
+    "who": "iris",
+    "t": 2.5
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "As pegadas molhadas nunca mais apareceram na Estrada 9.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL DE PERSONAGEM",
+    "sub": "Margem do Lago",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_naomi"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_survival": {
+  "steps": [
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "fear"
+   },
+   {
+    "c": "move",
+    "who": "player",
+    "speed": 320,
+    "wait": true,
+    "dx": -600
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "estrada9",
+    "x": 3000
+   },
+   {
+    "c": "time",
+    "h": 4.5
+   },
+   {
+    "c": "rain",
+    "on": true
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "move",
+    "who": "player",
+    "speed": 300,
+    "wait": true,
+    "x": 200
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Não olha para trás. Não liga o rádio. Não olha para trás.",
+    "expr": "scared"
+   },
+   {
+    "c": "radio",
+    "text": "...volte... você esqueceu de desligar..."
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "Você chegou à cidade vizinha ao amanhecer. Ninguém lá tinha ouvido falar de Ravenhill. Seu rádio, desligado, chiou baixinho a viagem inteira.",
+    "expr": "neutral"
+   },
+   {
+    "c": "card",
+    "text": "FINAL DE SOBREVIVÊNCIA",
+    "sub": "Estrada 9",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_survival"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ },
+ "end_main": {
+  "steps": [
+   {
+    "c": "anim",
+    "who": "player",
+    "name": "inspect"
+   },
+   {
+    "c": "sfx",
+    "name": "glitch"
+   },
+   {
+    "c": "shake",
+    "amp": 24
+   },
+   {
+    "c": "say",
+    "who": "abel",
+    "text": "Iris... a música...",
+    "expr": "sad"
+   },
+   {
+    "c": "flash",
+    "color": "ffffff",
+    "t": 2.5
+   },
+   {
+    "c": "despawn",
+    "who": "abel"
+   },
+   {
+    "c": "fade_out",
+    "t": 1.0
+   },
+   {
+    "c": "location",
+    "id": "praca",
+    "x": 1400
+   },
+   {
+    "c": "time",
+    "h": 6.0
+   },
+   {
+    "c": "rain",
+    "on": false
+   },
+   {
+    "c": "cam",
+    "on": "player",
+    "t": 0.1
+   },
+   {
+    "c": "fade_in",
+    "t": 1.2
+   },
+   {
+    "c": "say",
+    "who": "narrator",
+    "text": "A torre caiu às quatro e dez. Em quarenta e uma casas de Ravenhill, alguém acordou sozinho e não soube por quê.",
+    "expr": "neutral"
+   },
+   {
+    "c": "say",
+    "who": "player",
+    "text": "Acabou. Ficou silencioso. Ficou... vazio.",
+    "expr": "sad"
+   },
+   {
+    "c": "card",
+    "text": "FINAL PRINCIPAL",
+    "sub": "Silêncio",
+    "t": 3.5
+   },
+   {
+    "c": "fade_out",
+    "t": 2.0
+   },
+   {
+    "c": "ending",
+    "id": "end_main"
+   },
+   {
+    "c": "credits"
+   }
+  ]
+ }
+}

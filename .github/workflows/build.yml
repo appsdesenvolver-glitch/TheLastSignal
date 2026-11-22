@@ -1,0 +1,104 @@
+name: Build & Test — The Last Signal
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  GODOT_VERSION: "4.3"
+
+jobs:
+  validate:
+    name: Validar conteúdo e processar sprites
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Validar dados (referências, missões impossíveis, finais)
+        run: python tools/validate_data.py
+      - name: Verificação estrutural do GDScript
+        run: python tools/lint_gd.py
+      - name: Pipeline de sprites MUGEN (art/source -> art/characters)
+        run: python tools/sprite_pipeline.py
+      - name: Relatório de arte
+        run: |
+          echo "## Sprites processados" >> $GITHUB_STEP_SUMMARY
+          find art/characters -name manifest.json -exec sh -c 'echo "- $(dirname {})"' \; >> $GITHUB_STEP_SUMMARY || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: art-processed
+          path: art/characters
+          if-no-files-found: ignore
+
+  build:
+    name: Exportar Android + Windows e rodar testes
+    needs: validate
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: art-processed
+          path: art/characters
+      - name: Preparar templates e SDK
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/ ~/.config/godot
+          cp -r /root/.config/godot/* ~/.config/godot/ 2>/dev/null || true
+          if [ -d /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ]; then
+            mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          fi
+          SDK="${ANDROID_HOME:-/usr/lib/android-sdk}"
+          JDK="$(dirname "$(dirname "$(readlink -f "$(which java)")")")"
+          for f in editor_settings-4.tres editor_settings-4.3.tres; do
+            printf '[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\n' "$SDK" "$JDK" > ~/.config/godot/$f
+          done
+          echo "SDK=$SDK JDK=$JDK"
+      - name: Keystore de debug
+        run: |
+          keytool -keyalg RSA -genkeypair -alias androiddebugkey -keypass android -keystore debug.keystore -storepass android -dname "CN=Android Debug,O=KAIKODEV,C=BR" -validity 9999 -deststoretype pkcs12
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_PATH=$(pwd)/debug.keystore" >> $GITHUB_ENV
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_USER=androiddebugkey" >> $GITHUB_ENV
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD=android" >> $GITHUB_ENV
+      - name: Importar recursos
+        run: |
+          timeout 600 godot --headless --import || timeout 600 godot --headless --editor --quit || true
+      - name: Exportar APK (Android)
+        run: |
+          mkdir -p build/android
+          godot --headless --verbose --export-debug "Android" build/android/TheLastSignal.apk 2>&1 | tail -80
+          test -s build/android/TheLastSignal.apk
+      - name: Exportar Windows
+        run: |
+          mkdir -p build/windows
+          godot --headless --export-release "Windows Desktop" build/windows/TheLastSignal.exe 2>&1 | tail -40
+          test -s build/windows/TheLastSignal.exe
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: TheLastSignal-Android-APK
+          path: build/android/*.apk
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: TheLastSignal-Windows
+          path: build/windows/
+          if-no-files-found: warn
+      - name: Testes automatizados (jogatina completa dos 4 protagonistas)
+        run: |
+          timeout 600 godot --headless --path . res://tests/Tests.tscn 2>&1 | tee test-log.txt | tail -120
+          grep -q "0 falhas" test-log.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-log
+          path: test-log.txt
+          if-no-files-found: ignore

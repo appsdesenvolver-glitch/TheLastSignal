@@ -1,0 +1,1337 @@
+{
+ "edith_day": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Senta onde quiser, querida. Café passado agora. Torta de maçã saiu às seis — como todo dia.",
+   "by_char": {
+    "theo": "Theo! Plantão de novo? Você precisa comer algo que não venha de máquina."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Há quanto tempo a senhora tem o Marlowe's?",
+     "next": "tempo"
+    },
+    {
+     "text": "Viu alguém estranho por aqui à noite?",
+     "next": "noite"
+    },
+    {
+     "text": "Conhece o Walt Greer?",
+     "next": "greer",
+     "if": {
+      "not_flag": "talked_greer"
+     }
+    },
+    {
+     "text": "Só um café, obrigado.",
+     "next": "end",
+     "do": {
+      "trust": {
+       "edith": 1
+      },
+      "heal": 10
+     }
+    }
+   ]
+  },
+  "tempo": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "tempo2",
+   "text": "Ah... desde sempre, parece. Abri em setenta e oito. As pessoas mudam, a cidade muda. O café, não."
+  },
+  "tempo2": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Você está me olhando como se eu fosse uma foto velha."
+  },
+  "noite": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "noite2",
+   "text": "À noite? Querida, depois das três eu só sirvo quem não consegue dormir. E quem não consegue dormir em Ravenhill... sabe por quê."
+  },
+  "noite2": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Fique longe dos postes que piscam. E se ouvir o rádio chamar seu nome, não responda.",
+   "do": {
+    "set": "edith_warned"
+   }
+  },
+  "greer": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "O Walt? Rádios Greer, aqui do lado. Ele janta aqui depois das sete, sempre no mesmo banco. Diga que fui eu que mandei."
+  }
+ },
+ "edith_night": {
+  "start": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Três da manhã e você acordado. Senta. Ninguém deveria andar lá fora agora.",
+   "by_char": {
+    "elias": "Elias Vance. Seu pai sentava nesse mesmo banco. Pedia o café sem açúcar e falava sozinho com o rádio."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que tem lá fora?",
+     "next": "fora"
+    },
+    {
+     "text": "A senhora não dorme nunca?",
+     "next": "dorme"
+    },
+    {
+     "text": "Mostrar a foto de 1978.",
+     "next": "foto",
+     "if": {
+      "evidence": "foto_1979",
+      "not_flag": "edith_confronted"
+     }
+    },
+    {
+     "text": "Nada. Boa noite, Edith.",
+     "next": "end",
+     "do": {
+      "trust": {
+       "edith": 1
+      },
+      "heal": 15
+     }
+    }
+   ]
+  },
+  "fora": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Os que perderam o caminho de casa. Andam por onde andavam. Não é maldade, querida. É costume.",
+   "do": {
+    "set": "edith_hollows"
+   }
+  },
+  "dorme": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Dormir? ...Engraçado. Não lembro a última vez. Não lembro a última vez que senti sono."
+  },
+  "foto": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "end",
+   "text": "Onde você achou isso? ...Essa foto está na minha parede há vinte e seis anos. Volte mais tarde. Entre uma e cinco. Eu conto o que puder."
+  }
+ },
+ "edith_after": {
+  "start": {
+   "branch": [
+    {
+     "if": {
+      "flag": "edith_secret"
+     },
+     "go": "amiga"
+    },
+    {
+     "if": {
+      "trust_max": {
+       "edith": -1
+      }
+     },
+     "go": "fria"
+    },
+    {
+     "go": "neutra"
+    }
+   ]
+  },
+  "amiga": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "dica",
+   "text": "Seu café. E um pedaço extra de torta — por conta da casa. Por guardar o meu segredo.",
+   "do": {
+    "heal": 25
+   }
+  },
+  "fria": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "Você já disse o que achava de mim. Pode pedir o café no balcão."
+  },
+  "neutra": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "dica",
+   "text": "Café? Sente-se. Você sabe o que eu sou e ainda veio. Isso diz muito.",
+   "do": {
+    "heal": 15
+   }
+  },
+  "dica": {
+   "branch": [
+    {
+     "if": {
+      "chapter": 3
+     },
+     "go": "d3"
+    },
+    {
+     "if": {
+      "chapter": 4
+     },
+     "go": "d4"
+    },
+    {
+     "if": {
+      "chapter_min": 5
+     },
+     "go": "d5"
+    },
+    {
+     "go": "end"
+    }
+   ]
+  },
+  "d3": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "A Clara, do hospital, era minha amiga. Ela ainda faz a ronda do turno da noite. Se alguém sabe o que tem no subsolo, é ela."
+  },
+  "d4": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "O homem de óculos redondos... Aurelio. Ele tinha uma filhinha. Cantava no rádio do pai. Depois do lago, ele nunca mais desligou o rádio.",
+   "do": {
+    "set": "edith_told_iris"
+   }
+  },
+  "d5": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "end",
+   "text": "Se você for até a torre... diga a ele que a Edith mandou desligar. Ele vai rir. Mas vai lembrar de mim."
+  }
+ },
+ "greer": {
+  "start": {
+   "branch": [
+    {
+     "if": {
+      "flag": "greer_confessed"
+     },
+     "go": "depois"
+    },
+    {
+     "if": {
+      "deduction": "ded_edith"
+     },
+     "go": "confissao"
+    },
+    {
+     "if": {
+      "flag": "talked_greer"
+     },
+     "go": "rep"
+    },
+    {
+     "go": "a"
+    }
+   ]
+  },
+  "a": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "b",
+   "text": "Se veio por pilha, é na prateleira da esquerda. Se veio por conversa, eu fecho às sete.",
+   "by_char": {
+    "elias": "Vance. Você tem os olhos do seu pai. Ele deixou isto aqui comigo antes de... antes.",
+    "maya": "A menina do jornal. Não dou entrevista.",
+    "theo": "O enfermeiro. O seu irmão comprou pilhas aqui na véspera. Pilhas para um rádio velho.",
+    "naomi": "Reyes. Trouxe a peça do Benny? Põe ali no balcão."
+   }
+  },
+  "b": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que é a frequência 7.17?",
+     "next": "f717"
+    },
+    {
+     "text": "Mostrar o caderno do Daniel.",
+     "next": "caderno",
+     "if": {
+      "evidence": "caderno_daniel"
+     }
+    },
+    {
+     "text": "O que aconteceu em 1979?",
+     "next": "1979"
+    }
+   ]
+  },
+  "f717": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "f717b",
+   "text": "Ninguém transmite em 7.17. Ninguém VIVO. Era a frequência da KRVN, a rádio do Dr. Halvorsen."
+  },
+  "f717b": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "Se quiser ouvir, vá à Praça Memorial depois que escurecer. Mas leve isto — calibrei para 7.17. E não vá sozinho.",
+   "do": {
+    "set": "talked_greer",
+    "give": "radio_daniel"
+   },
+   "by_char": {
+    "elias": "O walkie-talkie do seu pai. Calibrei como ele pediu. Ele chia perto de... certas pessoas. Vá à Praça Memorial à noite. É lá que o sinal é mais forte."
+   }
+  },
+  "caderno": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "f717",
+   "text": "'Eles não sabem que estão mortos.' ...O Daniel chegou na mesma conclusão que eu, vinte e cinco anos atrás. E eu fugi. Ele não."
+  },
+  "1979": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "f717",
+   "text": "Um incêndio. Quarenta e uma pessoas no Santa Inês. Está tudo na placa da praça. O que não está na placa... não é para hoje."
+  },
+  "rep": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "A praça. Depois que escurecer. E não responda se ele chamar seu nome."
+  },
+  "confissao": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "conf2",
+   "text": "Você descobriu a Edith. Então merece saber o resto. Eu era o assistente do Halvorsen. Eu liguei o transmissor naquela noite."
+  },
+  "conf2": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "conf3",
+   "text": "Quarenta e uma pessoas morreram porque eu obedeci. Ele queria guardar a voz da filha no sinal. Guardou todas."
+  },
+  "conf3": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "Tem uma caixa lá atrás. Peças da KRVN e a chave de serviço da torre. Se alguém for acabar com isso... vai precisar dela.",
+   "do": {
+    "set": "greer_confessed",
+    "give": "fita_lamparina"
+   }
+  },
+  "depois": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "A caixa está lá atrás. E que Deus me perdoe pelo que eu liguei."
+  }
+ },
+ "jonah": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Ah, finalmente alguém que não me olha como se eu fosse maluco. Você ouviu, não ouviu? O chiado às três.",
+   "by_char": {
+    "maya": "Maya! A diretoria arrancou sua matéria do mural. Eu tirei foto antes. Você tinha razão sobre os postes.",
+    "elias": "Elias... cara. Sinto muito pelo seu pai. Eu não acho que ele fugiu. Eu acho que ele OUVIU."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que você sabe sobre os desaparecidos?",
+     "next": "sumicos"
+    },
+    {
+     "text": "Por que os postes?",
+     "next": "postes"
+    },
+    {
+     "text": "Quer vir comigo investigar?",
+     "next": "junto"
+    },
+    {
+     "text": "Depois a gente se fala.",
+     "next": "end"
+    }
+   ]
+  },
+  "sumicos": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Sete. Todos depois das três da manhã. Todos com um rádio ligado em casa. O mural no Centro tem todos os rostos. Dá uma olhada.",
+   "do": {
+    "set": "jonah_info"
+   }
+  },
+  "postes": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Os postes da cidade foram trocados em 1980, depois do incêndio. A prefeitura comprou de uma empresa chamada... Lamparina Ltda. Coincidência? Não.",
+   "do": {
+    "set": "jonah_lamparina"
+   }
+  },
+  "junto": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "De dia, tô dentro. De noite... minha mãe me mata. Ou alguma coisa me mata primeiro. Mas se precisar, eu apareço.",
+   "do": {
+    "trust": {
+     "jonah": 1
+    }
+   }
+  }
+ },
+ "jonah_late": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Eu sei que você vai entrar na Casa Halvorsen. Eu vou junto. Não discute."
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "É perigoso demais. Fica.",
+     "next": "fica",
+     "do": {
+      "set": "jonah_stays"
+     }
+    },
+    {
+     "text": "Tá. Fica atrás de mim.",
+     "next": "vem",
+     "do": {
+      "unset": "jonah_stays",
+      "trust": {
+       "jonah": 1
+      }
+     }
+    }
+   ]
+  },
+  "fica": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "...Tá bom. Mas se você não sair até o amanhecer, eu entro."
+  },
+  "vem": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "end",
+   "text": "Atrás de você. Com a lanterna. Tipo filme ruim. Ótimo."
+  }
+ },
+ "lucia_maya": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Minha luz! Chegou tarde de novo. Sentei aqui para esperar e o rádio ficou chiando a tarde inteira."
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Vó, a senhora trabalhou no Santa Inês?",
+     "next": "santa"
+    },
+    {
+     "text": "Vó... a senhora come alguma coisa hoje?",
+     "next": "come"
+    },
+    {
+     "text": "Mostrar a foto de 1979.",
+     "next": "foto",
+     "if": {
+      "evidence": "album_lucia"
+     }
+    },
+    {
+     "text": "Boa noite, vó.",
+     "next": "end",
+     "do": {
+      "trust": {
+       "lucia": 1
+      }
+     }
+    }
+   ]
+  },
+  "santa": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "santa2",
+   "text": "Enfermeira da ala três. Até o incêndio. Depois... depois eu vim cuidar de você."
+  },
+  "santa2": {
+   "who": "player",
+   "expr": "scared",
+   "next": "santa3",
+   "text": "Vó, eu nasci em 1987."
+  },
+  "santa3": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "...Nasceu? Claro que nasceu. Que cabeça a minha. O rádio está alto demais, minha luz.",
+   "do": {
+    "set": "lucia_slip"
+   }
+  },
+  "come": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Comi, comi. Mais tarde. Agora não estou com fome. Faz tempo que não estou com fome."
+  },
+  "foto": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "foto2",
+   "text": "Essa sou eu. Na frente do hospital. Que dia bonito era. ...Por que você está chorando?"
+  },
+  "foto2": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Nada, vó. Saudade de algo.",
+     "next": "end",
+     "do": {
+      "trust": {
+       "lucia": 2
+      },
+      "set": "lucia_protected"
+     }
+    },
+    {
+     "text": "Vó, a senhora morreu naquele dia.",
+     "next": "verdade",
+     "do": {
+      "set": "lucia_told"
+     }
+    }
+   ]
+  },
+  "verdade": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "...Eu sei, minha luz. Eu sempre soube um pouquinho. Mas você precisava de alguém. Então eu fiquei.",
+   "do": {
+    "trust": {
+     "lucia": 1
+    }
+   }
+  }
+ },
+ "lucia": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Você é amiga da minha neta? Entre, entre. Ela foi buscar pilha para o rádio. Esse rádio não para de chamar."
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que o rádio diz?",
+     "next": "radio"
+    },
+    {
+     "text": "A senhora conhece a Edith do Marlowe's?",
+     "next": "edith"
+    },
+    {
+     "text": "Tenho que ir.",
+     "next": "end"
+    }
+   ]
+  },
+  "radio": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Nomes. Sempre nomes. Ontem disse o de um rapaz, Daniel. Ele parecia tão cansado."
+  },
+  "edith": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "A Edith! Trabalhamos juntas na quermesse de setenta e nove. Ela não envelhece, aquela ali. Nem eu, dizem."
+  }
+ },
+ "abel": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Boa noite, mocidade. Não devia estar aqui tão tarde. Quer uma bala? Hortelã. Os jovens gostam de hortelã.",
+   "by_char": {
+    "elias": "Você é o menino do Daniel. Bom técnico, seu pai. Bom ouvido. Os melhores ouvidos vão longe."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Há quanto tempo o senhor trabalha aqui?",
+     "next": "tempo"
+    },
+    {
+     "text": "Esse rádio é antigo, hein?",
+     "next": "radio"
+    },
+    {
+     "text": "O senhor já ouviu falar em Halvorsen?",
+     "next": "halv",
+     "if": {
+      "flag": "know_halvorsen"
+     }
+    },
+    {
+     "text": "Aceitar a bala.",
+     "next": "bala",
+     "do": {
+      "trust": {
+       "abel": 1
+      }
+     }
+    },
+    {
+     "text": "Boa noite, Sr. Abel.",
+     "next": "end"
+    }
+   ]
+  },
+  "tempo": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Desde que a escola precisou de alguém que não dorme. Eu não durmo, sabe. Gosto de escutar a noite."
+  },
+  "radio": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "radio2",
+   "text": "Setenta e nove. Melhor ano das rádios. Dá para ouvir coisas que não passam em lugar nenhum. Quer ouvir?"
+  },
+  "radio2": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Quero.",
+     "next": "ouvir",
+     "do": {
+      "trust": {
+       "abel": 1
+      },
+      "damage": 10,
+      "set": "abel_listened"
+     }
+    },
+    {
+     "text": "Não, obrigado.",
+     "next": "q"
+    }
+   ]
+  },
+  "ouvir": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "end",
+   "text": "...Ouviu? Quarenta e uma vozes. Um coral. Falta só um pouquinho para ficar completo."
+  },
+  "halv": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "...Halvorsen. Nome bonito. Nome de quem não desiste. Vá para casa, criança. Está tarde.",
+   "do": {
+    "set": "abel_warned"
+   }
+  },
+  "bala": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Isso. Doce ajuda a não ter medo do escuro. Minha filha gostava de hortelã também.",
+   "do": {
+    "set": "abel_daughter"
+   }
+  }
+ },
+ "abel_end": {
+  "start": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "end",
+   "text": "Está quase na hora, criança. A colina está chamando você. Eu ouço."
+  }
+ },
+ "clara": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Visitas só até as dez. Mas eu não vou contar para ninguém se você não contar.",
+   "do": {
+    "set": "talked_clara"
+   },
+   "by_char": {
+    "theo": "Ashford. Você é o irmão. O Sam fala de você. Fala o tempo todo."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que tem no subsolo?",
+     "next": "sub"
+    },
+    {
+     "text": "O garoto de moletom vermelho...",
+     "next": "sam"
+    },
+    {
+     "text": "Seu uniforme é bem antigo.",
+     "next": "uni"
+    },
+    {
+     "text": "Preciso da chave do subsolo.",
+     "next": "chave",
+     "if": {
+      "chapter_min": 3,
+      "not_flag": "subsolo_key"
+     }
+    },
+    {
+     "text": "Até logo, enfermeira.",
+     "next": "end"
+    }
+   ]
+  },
+  "sub": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "A ala antiga. O Santa Inês. Tem coisas lá embaixo que ainda estão ligadas, mesmo sem energia."
+  },
+  "sam": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "sam2",
+   "text": "Ele quer ir para casa. Todos querem. Eu levo alguns até a porta. Os que deixam.",
+   "by_char": {
+    "theo": "O Sam está lá embaixo, Theo. Não do jeito que você quer. Mas está."
+   }
+  },
+  "sam2": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Você 'leva' os pacientes? Isso é assassinato.",
+     "next": "acusa",
+     "do": {
+      "trust": {
+       "clara": -2
+      }
+     }
+    },
+    {
+     "text": "Você os ajuda a partir.",
+     "next": "entende",
+     "do": {
+      "trust": {
+       "clara": 2
+      }
+     }
+    }
+   ]
+  },
+  "acusa": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Assassinato é deixar alguém preso no sinal para sempre. Eu abro a porta. Só isso."
+  },
+  "entende": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "...Obrigada. Faz vinte e cinco anos que ninguém entende.",
+   "do": {
+    "set": "clara_ally"
+   }
+  },
+  "uni": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Me disseram que é de antes do incêndio. Eu nem lembro de ter trocado."
+  },
+  "chave": {
+   "branch": [
+    {
+     "if": {
+      "trust_min": {
+       "clara": 1
+      }
+     },
+     "go": "chave_ok"
+    },
+    {
+     "go": "chave_nao"
+    }
+   ]
+  },
+  "chave_ok": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "Tome. Desça pela escada do fim do corredor. E se ouvir passos que não são os seus... prenda a respiração. Ele ouve tudo.",
+   "do": {
+    "set": "subsolo_key"
+   }
+  },
+  "chave_nao": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Não confio em quem não entende o que eu faço. Peça para a doutora de dia."
+  }
+ },
+ "helen": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Se não for emergência, a fila é por ali. ...Ah. Você não está aqui por um corte.",
+   "by_char": {
+    "theo": "Ashford, seu turno é à noite. Veio fazer hora extra ou veio fuçar a ala antiga de novo?"
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "O que a senhora sabe sobre o Santa Inês?",
+     "next": "santa"
+    },
+    {
+     "text": "Quem é a enfermeira Clara Wynn?",
+     "next": "clara",
+     "if": {
+      "evidence": "prontuario_4"
+     }
+    },
+    {
+     "text": "Preciso descer ao subsolo.",
+     "next": "chave",
+     "if": {
+      "chapter_min": 3,
+      "not_flag": "subsolo_key"
+     }
+    },
+    {
+     "text": "Até mais.",
+     "next": "end"
+    }
+   ]
+  },
+  "santa": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Eu levanto os prontuários de 1979 escondida. A diretoria diz que foi curto-circuito. Mas o laudo fala em 'sobrecarga de transmissão'. Num hospital.",
+   "do": {
+    "set": "helen_info"
+   }
+  },
+  "clara": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Clara Wynn não trabalha aqui. Não há registro dela desde... (ela abre uma pasta) ...1979. Isso não tem graça."
+  },
+  "chave": {
+   "branch": [
+    {
+     "if": {
+      "flag": "helen_info"
+     },
+     "go": "chave_ok"
+    },
+    {
+     "go": "chave_nao"
+    }
+   ]
+  },
+  "chave_ok": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "Você é o único que acredita em mim, então. Aqui. Ala Santa Inês. Se encontrar o transmissor, me traga uma foto.",
+   "do": {
+    "set": "subsolo_key",
+    "trust": {
+     "helen": 1
+    }
+   }
+  },
+  "chave_nao": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "O subsolo está interditado. Sem motivo, sem chave."
+  }
+ },
+ "iris": {
+  "start": {
+   "branch": [
+    {
+     "if": {
+      "trust_min": {
+       "iris": 2
+      }
+     },
+     "go": "amiga"
+    },
+    {
+     "if": {
+      "met": "iris",
+      "flag": "iris_talked"
+     },
+     "go": "de_novo"
+    },
+    {
+     "go": "a"
+    }
+   ]
+  },
+  "a": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Você também está ouvindo a música? Ninguém mais ouve. Só o meu pai.",
+   "do": {
+    "set": "iris_talked"
+   },
+   "by_char": {
+    "naomi": "Você cresceu. Ainda tem medo da água?"
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Quem é o seu pai?",
+     "next": "pai"
+    },
+    {
+     "text": "Por que seu vestido está molhado?",
+     "next": "molhado"
+    },
+    {
+     "text": "Cantar a música com ela.",
+     "next": "canta",
+     "do": {
+      "trust": {
+       "iris": 1
+      }
+     }
+    },
+    {
+     "text": "Você devia ir para casa.",
+     "next": "casa"
+    }
+   ]
+  },
+  "pai": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Ele mora na torre agora. Ele fala comigo pelo rádio, mas eu não consigo responder. Ele não ouve quando eu peço para parar.",
+   "do": {
+    "set": "iris_father"
+   }
+  },
+  "molhado": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "O lago é frio. Eu fico esperando secar, mas não seca."
+  },
+  "canta": {
+   "who": "narrator",
+   "expr": "neutral",
+   "next": "q",
+   "text": "(Ela cantarola uma canção de ninar ao contrário. Por um segundo, todos os postes da praça ficam firmes.)"
+  },
+  "casa": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Minha casa é na Rua do Corvo. Mas lá só tem o espelho e a gaveta. Não gosto da gaveta.",
+   "do": {
+    "trust": {
+     "iris": 1
+    },
+    "set": "iris_house"
+   }
+  },
+  "de_novo": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "q",
+   "text": "Voltou! Canta comigo?"
+  },
+  "amiga": {
+   "who": "npc",
+   "expr": "smile",
+   "next": "end",
+   "text": "Você é minha amiga agora. Quando você for na torre, me chama. Eu acho que ele me ouve se você segurar o rádio perto.",
+   "do": {
+    "set": "iris_trusted"
+   }
+  }
+ },
+ "marta": {
+  "start": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "Ele vem todas as noites. O Roy. Diz que eu sou a razão dele. Eu não lembro do caminho até em casa."
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "A senhora trabalhava no Santa Inês?",
+     "next": "santa"
+    },
+    {
+     "text": "O delegado está encobrindo os desaparecimentos por sua causa.",
+     "next": "kessler",
+     "if": {
+      "flag": "saw_marta"
+     }
+    },
+    {
+     "text": "Boa noite.",
+     "next": "end"
+    }
+   ]
+  },
+  "santa": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Ala três. Com a Lúcia e a Clara. Naquela noite o rádio da sala do doutor começou a gritar. E depois... depois a praça."
+  },
+  "kessler": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "...Então é por isso que ele fica. E por isso que os outros somem. Diga a ele que eu prefiro ir. Diga que eu pedi.",
+   "do": {
+    "set": "marta_release",
+    "trust": {
+     "marta": 1
+    }
+   }
+  }
+ },
+ "kessler": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Se veio registrar desaparecimento, o formulário está ali. Se veio dar palpite, a porta está atrás de você.",
+   "by_char": {
+    "elias": "Vance. Seu pai foi embora, garoto. Homens vão embora. Aceita.",
+    "maya": "A repórter. Se publicar mais uma linha sobre 'postes assassinos', eu falo com a diretoria de novo."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Sete pessoas não fogem da mesma forma.",
+     "next": "sete"
+    },
+    {
+     "text": "Quem é Marta?",
+     "next": "marta",
+     "if": {
+      "evidence": "obito_marta"
+     }
+    },
+    {
+     "text": "Marta pediu para ir.",
+     "next": "release",
+     "if": {
+      "flag": "marta_release"
+     }
+    },
+    {
+     "text": "Já estou indo.",
+     "next": "end"
+    }
+   ]
+  },
+  "sete": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Fogem, sim. Ravenhill é pequena. Gente pequena foge. Caso encerrado.",
+   "do": {
+    "set": "met_kessler_talk"
+   }
+  },
+  "marta": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "end",
+   "text": "...Quem te deu o direito de abrir a minha gaveta? Saia. SAIA.",
+   "do": {
+    "trust": {
+     "kessler": -1
+    }
+   }
+  },
+  "release": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "release2",
+   "text": "Ela... ela disse isso? (O delegado senta. Envelhece dez anos em um segundo.) Vinte e cinco anos. Eu só queria mais uma noite."
+  },
+  "release2": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "end",
+   "text": "Os arquivos dos sete estão na gaveta de baixo. Todos ouviram o rádio antes. Faça o que eu não tive coragem de fazer.",
+   "do": {
+    "set": "kessler_ally",
+    "trust": {
+     "kessler": 2
+    }
+   }
+  }
+ },
+ "tomas": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Que a paz esteja com você. A igreja está aberta para quem procura — e para quem foge."
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Preciso ver o livro de óbitos de 1979.",
+     "next": "livro",
+     "if": {
+      "not_evidence": "livro_obitos"
+     }
+    },
+    {
+     "text": "Por que o vitral tem uma torre no lugar da cruz?",
+     "next": "vitral"
+    },
+    {
+     "text": "O senhor reza pelos 41?",
+     "next": "reza"
+    },
+    {
+     "text": "Obrigado, padre.",
+     "next": "end"
+    }
+   ]
+  },
+  "livro": {
+   "branch": [
+    {
+     "if": {
+      "any": [
+       {
+        "evidence": "foto_1979"
+       },
+       {
+        "trust_min": {
+         "tomas": 1
+        }
+       }
+      ]
+     },
+     "go": "livro_ok"
+    },
+    {
+     "go": "livro_nao"
+    }
+   ]
+  },
+  "livro_nao": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Os mortos merecem descanso, não curiosidade. Volte quando tiver um motivo que não seja só curiosidade."
+  },
+  "livro_ok": {
+   "who": "npc",
+   "expr": "sad",
+   "next": "q",
+   "text": "(Ele olha a foto por muito tempo.) ...Você também viu, então. Leve. Mas leia com respeito: são nomes que esta cidade se esforça para não lembrar.",
+   "do": {
+    "give": "livro_obitos",
+    "trust": {
+     "tomas": 1
+    }
+   }
+  },
+  "vitral": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Foi doado em 1980 por um benfeitor anônimo. Assinou só 'A.H.'. Eu nunca tive coragem de trocar.",
+   "do": {
+    "set": "tomas_ah"
+   }
+  },
+  "reza": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Todos os dias. E todo dia trinta e um alguém deixa café fresco no altar. Eu nunca vejo quem.",
+   "do": {
+    "trust": {
+     "tomas": 1
+    }
+   }
+  }
+ },
+ "benny": {
+  "start": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "q",
+   "text": "Reyes! A bomba dois está pingando de novo.",
+   "by_char": {
+    "elias": "Gasolina ou café? O café é ruim, mas é quente.",
+    "maya": "Sem fotos, menina. Já falei com aquele jornal.",
+    "theo": "O irmão do Sam. ...Sinto muito, garoto."
+   }
+  },
+  "q": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "choices": [
+    {
+     "text": "Por que você cava atrás do posto de madrugada?",
+     "next": "cava",
+     "if": {
+      "chapter_min": 2,
+      "not_flag": "benny_cleared"
+     }
+    },
+    {
+     "text": "Viu algo estranho na estrada?",
+     "next": "estrada"
+    },
+    {
+     "text": "Valeu, Benny.",
+     "next": "end"
+    }
+   ]
+  },
+  "cava": {
+   "who": "npc",
+   "expr": "neutral",
+   "next": "end",
+   "text": "...Isso não é da sua conta. Vai trabalhar. Ou vai embora.",
+   "do": {
+    "trust": {
+     "benny": -1
+    }
+   }
+  },
+  "estrada": {
+   "who": "npc",
+   "expr": "scared",
+   "next": "q",
+   "text": "Toda noite tem gente andando no acostamento sem carro, sem lanterna. Eu não paro. Ninguém para."
+  }
+ }
+}

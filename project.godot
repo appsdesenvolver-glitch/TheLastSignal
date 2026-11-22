@@ -1,0 +1,49 @@
+; THE LAST SIGNAL — KAIKODEV
+; Godot 4.3 (renderizador Compatibility: roda em celulares OpenGL ES 3.0 e PCs antigos)
+
+config_version=5
+
+[application]
+
+config/name="The Last Signal"
+config/description="Terror sobrenatural 2D em estilo MUGEN — Ravenhill, 2004."
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.03, 0.03, 0.04, 1)
+boot_splash/show_image=false
+
+[autoload]
+
+Data="*res://scripts/core/data.gd"
+Game="*res://scripts/core/game.gd"
+Clock="*res://scripts/core/clock.gd"
+Sfx="*res://scripts/core/audio.gd"
+Art="*res://scripts/core/art.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+window/vsync/vsync_mode=1
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=true
+pointing/emulate_touch_from_mouse=false
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+textures/canvas_textures/default_texture_filter=1
+2d/snap/snap_2d_transforms_to_pixel=false
+environment/defaults/default_clear_color=Color(0.02, 0.02, 0.03, 1)

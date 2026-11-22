@@ -1,0 +1,552 @@
+{
+ "m1_main": {
+  "title": "Frequência Morta",
+  "type": "main",
+  "chapter": 1,
+  "desc": "Algo em Ravenhill transmite na frequência 7.17. Quem ouve, some.",
+  "steps": [
+   {
+    "text": "Vá à Rádios Greer, na Avenida Principal (abre às 9h — ou encontre Walt no Marlowe's à noite).",
+    "done_if": {
+     "flag": "talked_greer"
+    }
+   },
+   {
+    "text": "Espere a noite e sintonize 7.17 na Praça Memorial.",
+    "done_if": {
+     "flag": "heard_717"
+    }
+   },
+   {
+    "text": "Sobreviva e chegue ao Marlowe's Diner — está aberto a noite toda.",
+    "done_if": {
+     "flag": "ch1_done"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter": 1
+  },
+  "priority": 10
+ },
+ "s_cartazes": {
+  "title": "Os Sete Cartazes",
+  "type": "side",
+  "chapter": 1,
+  "desc": "O mural de desaparecidos na Avenida Principal.",
+  "steps": [
+   {
+    "text": "Examine o mural de desaparecidos no Centro.",
+    "done_if": {
+     "evidence": "cartazes"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter_min": 1,
+   "met": "jonah"
+  },
+  "on_complete": {
+   "trust": {
+    "jonah": 1
+   }
+  }
+ },
+ "c_elias": {
+  "title": "A Bancada",
+  "type": "char",
+  "chapter": 1,
+  "desc": "O pai deixou tudo como estava.",
+  "steps": [
+   {
+    "text": "Examine a bancada do pai.",
+    "done_if": {
+     "evidence": "caderno_daniel"
+    }
+   },
+   {
+    "text": "Ligue o caderno do pai aos cartazes no quadro de deduções.",
+    "done_if": {
+     "deduction": "ded_padrao"
+    }
+   }
+  ],
+  "char": "elias",
+  "auto_start": {
+   "char": "elias"
+  }
+ },
+ "c_maya": {
+  "title": "A Foto que Eu Não Tirei",
+  "type": "char",
+  "chapter": 1,
+  "desc": "Uma foto de 1979 com a avó idêntica a hoje.",
+  "steps": [
+   {
+    "text": "Converse com a vó Lúcia.",
+    "done_if": {
+     "met": "lucia"
+    }
+   },
+   {
+    "text": "Examine o álbum de família.",
+    "done_if": {
+     "evidence": "album_lucia"
+    }
+   },
+   {
+    "text": "Fotografe a avó (botão de foto) ou observe o espelho da sala.",
+    "done_if": {
+     "any": [
+      {
+       "evidence": "tell_lucia_photo"
+      },
+      {
+       "evidence": "tell_lucia_mirror"
+      }
+     ]
+    }
+   }
+  ],
+  "char": "maya",
+  "auto_start": {
+   "char": "maya"
+  }
+ },
+ "c_theo": {
+  "title": "O Garoto de Moletom Vermelho",
+  "type": "char",
+  "chapter": 1,
+  "desc": "Os pacientes falam de um garoto que quer ir para casa.",
+  "steps": [
+   {
+    "text": "Leia o prontuário do leito 4 na recepção.",
+    "done_if": {
+     "evidence": "prontuario_4"
+    }
+   },
+   {
+    "text": "Pegue as chaves no seu armário.",
+    "done_if": {
+     "evidence": "chaves_plantao"
+    }
+   },
+   {
+    "text": "Procure o carro do Sam na Estrada 9.",
+    "done_if": {
+     "evidence": "fita_sam"
+    }
+   }
+  ],
+  "char": "theo",
+  "auto_start": {
+   "char": "theo"
+  }
+ },
+ "c_naomi": {
+  "title": "Três Minutos",
+  "type": "char",
+  "chapter": 1,
+  "desc": "As pegadas levam todas para a colina.",
+  "steps": [
+   {
+    "text": "Releia o recorte na bancada da oficina.",
+    "done_if": {
+     "evidence": "recorte_1995"
+    }
+   },
+   {
+    "text": "Vá à margem do Lago Corvo (Estrada 9).",
+    "done_if": {
+     "flag": "lake_visited"
+    }
+   },
+   {
+    "text": "Use a Visão (Q) perto de alguém suspeito.",
+    "done_if": {
+     "any": [
+      {
+       "evidence": "tell_iris_vision"
+      },
+      {
+       "evidence": "tell_edith_vision"
+      },
+      {
+       "evidence": "tell_lucia_vision"
+      },
+      {
+       "evidence": "tell_clara_vision"
+      },
+      {
+       "evidence": "tell_marta_vision"
+      },
+      {
+       "evidence": "tell_abel_vision"
+      }
+     ]
+    }
+   }
+  ],
+  "char": "naomi",
+  "auto_start": {
+   "char": "naomi"
+  }
+ },
+ "s_sam_tape": {
+  "title": "Mix da Estrada",
+  "type": "side",
+  "chapter": 1,
+  "desc": "Um carro abandonado na Estrada 9.",
+  "steps": [
+   {
+    "text": "Encontre o carro abandonado na Estrada 9.",
+    "done_if": {
+     "evidence": "fita_sam"
+    }
+   }
+  ],
+  "auto_start": {
+   "not_char": "theo",
+   "met": "helen"
+  }
+ },
+ "m2_main": {
+  "title": "Café às Três",
+  "type": "main",
+  "chapter": 2,
+  "desc": "Edith serve café a qualquer hora. Há quanto tempo?",
+  "steps": [
+   {
+    "text": "Examine a foto emoldurada no Marlowe's Diner.",
+    "done_if": {
+     "evidence": "foto_1979"
+    }
+   },
+   {
+    "text": "Consiga o Livro de Óbitos de 1979 com o Padre Tomás (Igreja, de dia).",
+    "done_if": {
+     "evidence": "livro_obitos"
+    }
+   },
+   {
+    "text": "No Caderno (Quadro), ligue a foto ao livro de óbitos.",
+    "done_if": {
+     "deduction": "ded_edith"
+    }
+   },
+   {
+    "text": "Volte ao Marlowe's de madrugada (entre 1h e 5h) e fale com Edith.",
+    "done_if": {
+     "flag": "edith_confronted"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter": 2
+  },
+  "priority": 10
+ },
+ "s_kessler": {
+  "title": "A Razão do Delegado",
+  "type": "side",
+  "chapter": 2,
+  "desc": "Kessler arquiva todos os casos. Por quê?",
+  "steps": [
+   {
+    "text": "Fale com o Delegado Kessler.",
+    "done_if": {
+     "met": "kessler"
+    }
+   },
+   {
+    "text": "Siga Kessler até a Praça Memorial à noite.",
+    "done_if": {
+     "flag": "saw_marta"
+    }
+   },
+   {
+    "text": "Descubra quem é Marta (a gaveta do delegado, à noite).",
+    "done_if": {
+     "evidence": "obito_marta"
+    }
+   },
+   {
+    "text": "Deduza o motivo de Kessler.",
+    "done_if": {
+     "deduction": "ded_marta"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter_min": 2
+  }
+ },
+ "s_benny": {
+  "title": "O Que Benny Enterra",
+  "type": "side",
+  "chapter": 2,
+  "desc": "Benny cava atrás do posto às três da manhã.",
+  "steps": [
+   {
+    "text": "Investigue a terra revirada na Estrada 9.",
+    "done_if": {
+     "flag": "benny_cleared"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter_min": 2,
+   "any": [
+    {
+     "char": "naomi"
+    },
+    {
+     "met": "benny"
+    }
+   ]
+  },
+  "on_complete": {
+   "trust": {
+    "benny": 1
+   }
+  }
+ },
+ "s_greer": {
+  "title": "A Caixa da KRVN",
+  "type": "side",
+  "chapter": 2,
+  "desc": "Walt Greer trabalhou com Halvorsen.",
+  "steps": [
+   {
+    "text": "Converse com Greer depois de descobrir a verdade sobre Edith.",
+    "done_if": {
+     "flag": "greer_confessed"
+    }
+   },
+   {
+    "text": "Abra a caixa lacrada na loja.",
+    "done_if": {
+     "evidence": "caixa_krvn"
+    }
+   }
+  ],
+  "auto_start": {
+   "deduction": "ded_edith"
+  }
+ },
+ "s_iris": {
+  "title": "A Menina do Balanço",
+  "type": "side",
+  "chapter": 2,
+  "desc": "Uma menina no balanço da praça, toda noite.",
+  "steps": [
+   {
+    "text": "Fale com a menina do balanço à noite.",
+    "done_if": {
+     "met": "iris"
+    }
+   },
+   {
+    "text": "Ganhe a confiança dela.",
+    "done_if": {
+     "trust_min": {
+      "iris": 2
+     }
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter_min": 2,
+   "flag": "heard_717"
+  },
+  "on_complete": {
+   "set": "iris_trusted",
+   "give": "desenho_iris"
+  }
+ },
+ "m3_main": {
+  "title": "Santa Inês",
+  "type": "main",
+  "chapter": 3,
+  "desc": "O Hospital Geral foi construído sobre as ruínas do Santa Inês.",
+  "steps": [
+   {
+    "text": "Vá ao Hospital Geral à noite e fale com a enfermeira Clara.",
+    "done_if": {
+     "flag": "talked_clara"
+    }
+   },
+   {
+    "text": "Consiga a chave do subsolo (Clara, Dra. Helen ou o armário do plantão).",
+    "done_if": {
+     "flag": "subsolo_key"
+    }
+   },
+   {
+    "text": "Desça ao subsolo e encontre a sala do transmissor.",
+    "done_if": {
+     "flag": "got_notas"
+    }
+   },
+   {
+    "text": "Fuja do subsolo.",
+    "done_if": {
+     "flag": "escaped_subsolo"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter": 3
+  },
+  "priority": 10
+ },
+ "s_abel": {
+  "title": "O Vigia",
+  "type": "side",
+  "chapter": 3,
+  "desc": "O Sr. Abel trabalha no colégio desde... ninguém sabe.",
+  "steps": [
+   {
+    "text": "Examine o rádio do vigia no corredor do colégio.",
+    "done_if": {
+     "evidence": "radio_abel"
+    }
+   },
+   {
+    "text": "Fotografe o Sr. Abel.",
+    "done_if": {
+     "evidence": "tell_abel_photo"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter_min": 3
+  }
+ },
+ "m4_main": {
+  "title": "A Casa Halvorsen",
+  "type": "main",
+  "chapter": 4,
+  "desc": "Quem criou o sinal nunca foi embora.",
+  "steps": [
+   {
+    "text": "Descubra quem era Halvorsen (ligue as notas à foto de 1978 ou às contas pagas).",
+    "done_if": {
+     "flag": "know_halvorsen"
+    }
+   },
+   {
+    "text": "Entre na Casa Halvorsen, no fim da Rua do Corvo, à noite.",
+    "done_if": {
+     "location": "casa_halvorsen"
+    }
+   },
+   {
+    "text": "Encontre o caminho para o laboratório.",
+    "done_if": {
+     "flag": "found_hatch"
+    }
+   },
+   {
+    "text": "Investigue o Laboratório Lamparina.",
+    "done_if": {
+     "evidence": "diario_halvorsen"
+    }
+   },
+   {
+    "text": "Saia do laboratório com vida.",
+    "done_if": {
+     "flag": "ch4_done"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter": 4
+  },
+  "priority": 10
+ },
+ "s_iris_truth": {
+  "title": "Quem Ele Escutaria",
+  "type": "secret",
+  "chapter": 4,
+  "desc": "O Maestro faz tudo isso por alguém.",
+  "steps": [
+   {
+    "text": "Deduza por quem Halvorsen mantém o sinal.",
+    "done_if": {
+     "deduction": "ded_iris"
+    }
+   }
+  ],
+  "auto_start": {
+   "evidence": "certidao_iris"
+  }
+ },
+ "m5_main": {
+  "title": "O Último Sinal",
+  "type": "main",
+  "chapter": 5,
+  "desc": "A tempestade chegou. A torre está transmitindo sem parar.",
+  "steps": [
+   {
+    "text": "Suba a Trilha da Colina (atrás do Hospital Geral).",
+    "done_if": {
+     "location": "colina"
+    }
+   },
+   {
+    "text": "Entre na Torre KRVN.",
+    "done_if": {
+     "location": "torre"
+    }
+   },
+   {
+    "text": "Ative os três relés da torre enquanto foge do Maestro.",
+    "done_if": {
+     "flags": [
+      "relay1",
+      "relay2",
+      "relay3"
+     ]
+    }
+   },
+   {
+    "text": "Termine a transmissão.",
+    "done_if": {
+     "flag": "final_done"
+    }
+   }
+  ],
+  "auto_start": {
+   "chapter": 5
+  },
+  "priority": 10
+ },
+ "n_noite": {
+  "title": "Sobreviver à Noite",
+  "type": "night",
+  "chapter": 1,
+  "desc": "Depois das 3h, não fique perto de postes que piscam.",
+  "steps": [
+   {
+    "text": "Sobreviva até o amanhecer (5h).",
+    "done_if": {
+     "hour_between": [
+      5,
+      7
+     ]
+    }
+   }
+  ],
+  "auto_start": {
+   "hour_between": [
+    2,
+    3
+   ],
+   "chapter_min": 2
+  },
+  "on_complete": {
+   "heal": 30
+  }
+ }
+}

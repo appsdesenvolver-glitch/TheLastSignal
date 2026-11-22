@@ -1,0 +1,418 @@
+{
+ "items": {
+  "caderno_daniel": {
+   "name": "Caderno de Daniel Vance",
+   "desc": "'7.17' repetido dezenas de vezes. Última página: 'Eles não sabem que estão mortos.'",
+   "kind": "doc"
+  },
+  "foto_familia": {
+   "name": "Foto no Lago Corvo",
+   "desc": "Elias e o pai, verão de 1996. O lago está no fundo — escuro demais para um dia de sol.",
+   "kind": "photo"
+  },
+  "radio_daniel": {
+   "name": "Walkie-talkie consertado",
+   "desc": "Greer calibrou o aparelho do Daniel para 7.17. Ele chia mais perto de certas pessoas.",
+   "kind": "object"
+  },
+  "cartazes": {
+   "name": "Cartazes de desaparecidos",
+   "desc": "Sete pessoas. Todas sumiram depois das 3h, perto de postes que piscam.",
+   "kind": "doc"
+  },
+  "placa_41": {
+   "name": "Placa dos 41",
+   "desc": "Memorial do incêndio do Santa Inês, 31/10/1979. Um nome foi raspado.",
+   "kind": "object"
+  },
+  "fita_sam": {
+   "name": "Fita 'Mix da Estrada'",
+   "desc": "Fita K7 do Sam. No fim do lado B, depois da última música, só chiado — e uma voz contando até 41.",
+   "kind": "audio"
+  },
+  "pegadas_lago": {
+   "name": "Pegadas do lago",
+   "desc": "Pés pequenos, descalços, saindo e voltando para a água.",
+   "kind": "object",
+   "about": "iris"
+  },
+  "recorte_1995": {
+   "name": "Recorte de 1995",
+   "desc": "Naomi, 9 anos, resgatada do Lago Corvo após 3 minutos submersa.",
+   "kind": "doc"
+  },
+  "album_lucia": {
+   "name": "Álbum de 1979",
+   "desc": "Lúcia Cordeiro em 1979, idêntica a hoje, com uniforme de enfermeira do Santa Inês.",
+   "kind": "photo",
+   "about": "lucia"
+  },
+  "foto_1979": {
+   "name": "Foto da inauguração",
+   "desc": "Marlowe's, 1978: Edith igual a hoje. Ao fundo, Dr. A. Halvorsen com um rádio.",
+   "kind": "photo",
+   "about": "edith"
+  },
+  "livro_obitos": {
+   "name": "Livro de óbitos de 1979",
+   "desc": "Os 41 nomes do incêndio. Inclui Edith Marlowe, Lúcia Cordeiro, Clara Wynn, Marta Kessler.",
+   "kind": "doc"
+  },
+  "edith_testemunho": {
+   "name": "Depoimento de Edith",
+   "desc": "'Nós somos quarenta e um. Alguns sabem. Os que não sabem são os mais felizes.'",
+   "kind": "testimony",
+   "about": "edith"
+  },
+  "contas_halvorsen": {
+   "name": "Contas pagas",
+   "desc": "Contas de luz da Casa Halvorsen pagas em 2004 — por um homem morto em 1979.",
+   "kind": "doc"
+  },
+  "quadro_kessler": {
+   "name": "Quadro do delegado",
+   "desc": "Todos os casos ligados à torre KRVN e arquivados como fuga por R. Kessler.",
+   "kind": "doc"
+  },
+  "obito_marta": {
+   "name": "Óbito de Marta Kessler",
+   "desc": "Enfermeira, morta no Santa Inês em 1979. A mulher que encontra o delegado toda noite.",
+   "kind": "doc",
+   "about": "marta"
+  },
+  "benny_dog": {
+   "name": "Coleira do Rufus",
+   "desc": "Benny só enterrou o cachorro. Ele é humano — e está de luto.",
+   "kind": "object",
+   "about": "benny"
+  },
+  "fita_lamparina": {
+   "name": "Fita de Greer",
+   "desc": "Gravação de 1979: Halvorsen testando o transmissor. 'Iris, se você me ouve, cante.'",
+   "kind": "audio"
+  },
+  "caixa_krvn": {
+   "name": "Caixa da KRVN",
+   "desc": "Peças de reposição do transmissor e a chave de serviço da torre.",
+   "kind": "object"
+  },
+  "jornal_censurado": {
+   "name": "Matéria arrancada",
+   "desc": "'QUEM ESTÁ OUVINDO?' — a matéria da Maya, censurada pela diretoria.",
+   "kind": "doc"
+  },
+  "prontuario_4": {
+   "name": "Prontuário do leito 4",
+   "desc": "'O garoto de moletom vermelho quer ir para casa.' Assinado: Enf. C. Wynn.",
+   "kind": "doc",
+   "about": "clara"
+  },
+  "chaves_plantao": {
+   "name": "Chaves do plantão",
+   "desc": "Abrem a ala antiga do subsolo.",
+   "kind": "object"
+  },
+  "cracha_sam": {
+   "name": "Crachá do Sam",
+   "desc": "Sam Ashford esteve no subsolo na noite em que desapareceu.",
+   "kind": "object"
+  },
+  "notas_lamparina": {
+   "name": "Notas do Projeto Lamparina",
+   "desc": "'Se a voz for gravada no sinal, a pessoa não precisa terminar.' — Dr. A. Halvorsen.",
+   "kind": "doc"
+  },
+  "radio_abel": {
+   "name": "Rádio do vigia",
+   "desc": "Rádio KRVN-001, peça de 1979, sintonizado em 7.17. Pertence ao Sr. Abel.",
+   "kind": "object",
+   "about": "abel"
+  },
+  "retrato_iris": {
+   "name": "Retrato dos Halvorsen",
+   "desc": "Aurelio, Ana e Iris — 1978. A menina do balanço.",
+   "kind": "photo",
+   "about": "iris"
+  },
+  "certidao_iris": {
+   "name": "Certidão de Iris",
+   "desc": "Iris Halvorsen, 8 anos, afogada no Lago Corvo em 14/08/1979.",
+   "kind": "doc",
+   "about": "iris"
+  },
+  "espelho_halvorsen": {
+   "name": "Reflexo na Casa Halvorsen",
+   "desc": "Um homem de óculos redondos no espelho — que não estava no cômodo.",
+   "kind": "object"
+  },
+  "diario_halvorsen": {
+   "name": "Diário de Halvorsen",
+   "desc": "Ele mantém 41 vozes no sinal para que a voz de Iris não se apague. A cada 25 anos, precisa de novas.",
+   "kind": "doc"
+  },
+  "fichas_lamparina": {
+   "name": "Fichas de 'vozes'",
+   "desc": "Fichas de 1979 dos 41 — e uma de 2004: Daniel Vance, 'voz compatível'.",
+   "kind": "doc"
+  },
+  "bobina_lamparina": {
+   "name": "Bobina Lamparina",
+   "desc": "A gravação mestra do sinal. Com ela, as vozes podem ser libertadas — ou mantidas.",
+   "kind": "audio"
+  },
+  "desenho_iris": {
+   "name": "Desenho de Iris",
+   "desc": "Um desenho de criança: um homem de óculos preso dentro de uma torre, chorando.",
+   "kind": "object",
+   "about": "iris"
+  },
+  "tell_edith_photo": {
+   "name": "Foto queimada: Edith",
+   "desc": "Na foto, Edith aparece chamuscada, como se estivesse no meio de um incêndio.",
+   "kind": "tell",
+   "about": "edith"
+  },
+  "tell_edith_radio": {
+   "name": "Chiado: Edith",
+   "desc": "O rádio grita perto dela.",
+   "kind": "tell",
+   "about": "edith"
+  },
+  "tell_edith_vision": {
+   "name": "Brilho: Edith",
+   "desc": "Na Visão, Edith brilha frio, azul.",
+   "kind": "tell",
+   "about": "edith"
+  },
+  "tell_edith_mirror": {
+   "name": "Sem reflexo: Edith",
+   "desc": "O espelho do Marlowe's não mostra Edith.",
+   "kind": "tell",
+   "about": "edith"
+  },
+  "tell_lucia_photo": {
+   "name": "Foto queimada: Lúcia",
+   "desc": "A avó aparece chamuscada na foto.",
+   "kind": "tell",
+   "about": "lucia"
+  },
+  "tell_lucia_radio": {
+   "name": "Chiado: Lúcia",
+   "desc": "O rádio chia perto dela.",
+   "kind": "tell",
+   "about": "lucia"
+  },
+  "tell_lucia_vision": {
+   "name": "Brilho: Lúcia",
+   "desc": "Ela brilha na Visão.",
+   "kind": "tell",
+   "about": "lucia"
+  },
+  "tell_lucia_mirror": {
+   "name": "Sem reflexo: Lúcia",
+   "desc": "O espelho mostra o tricô se mexendo sozinho.",
+   "kind": "tell",
+   "about": "lucia"
+  },
+  "tell_abel_photo": {
+   "name": "Foto queimada: Sr. Abel",
+   "desc": "Na foto, o vigia aparece com óculos redondos que ele não usa — e o rosto de Halvorsen.",
+   "kind": "tell",
+   "about": "abel"
+  },
+  "tell_abel_radio": {
+   "name": "Chiado: Sr. Abel",
+   "desc": "O rádio quase explode perto dele.",
+   "kind": "tell",
+   "about": "abel"
+  },
+  "tell_abel_vision": {
+   "name": "Brilho: Sr. Abel",
+   "desc": "Não brilha azul. Brilha vermelho.",
+   "kind": "tell",
+   "about": "abel"
+  },
+  "tell_clara_photo": {
+   "name": "Foto queimada: Clara",
+   "desc": "A enfermeira aparece com o uniforme em chamas.",
+   "kind": "tell",
+   "about": "clara"
+  },
+  "tell_clara_radio": {
+   "name": "Chiado: Clara",
+   "desc": "Estática perto da enfermeira.",
+   "kind": "tell",
+   "about": "clara"
+  },
+  "tell_clara_vision": {
+   "name": "Brilho: Clara",
+   "desc": "Clara brilha na Visão.",
+   "kind": "tell",
+   "about": "clara"
+  },
+  "tell_iris_photo": {
+   "name": "Foto molhada: Iris",
+   "desc": "A foto sai úmida, com a menina e algas no cabelo.",
+   "kind": "tell",
+   "about": "iris"
+  },
+  "tell_iris_radio": {
+   "name": "Canção no rádio",
+   "desc": "O rádio toca uma canção de ninar ao contrário perto dela.",
+   "kind": "tell",
+   "about": "iris"
+  },
+  "tell_iris_vision": {
+   "name": "Brilho: Iris",
+   "desc": "Ela brilha — e está molhada.",
+   "kind": "tell",
+   "about": "iris"
+  },
+  "tell_marta_photo": {
+   "name": "Foto queimada: Marta",
+   "desc": "Marta aparece chamuscada na foto.",
+   "kind": "tell",
+   "about": "marta"
+  },
+  "tell_marta_radio": {
+   "name": "Chiado: Marta",
+   "desc": "Estática perto dela.",
+   "kind": "tell",
+   "about": "marta"
+  },
+  "tell_marta_vision": {
+   "name": "Brilho: Marta",
+   "desc": "Ela brilha na Visão.",
+   "kind": "tell",
+   "about": "marta"
+  }
+ },
+ "deductions": [
+  {
+   "id": "ded_edith",
+   "a": "foto_1979",
+   "b": "livro_obitos",
+   "title": "Edith morreu em 1979",
+   "text": "A Edith da foto de 1978 está no livro de óbitos. A mulher que serve café hoje é a mesma — e está morta.",
+   "do": {
+    "set": "know_spirits"
+   }
+  },
+  {
+   "id": "ded_lucia",
+   "a": "album_lucia",
+   "b": "livro_obitos",
+   "title": "Lúcia está entre os 41",
+   "text": "A avó Lúcia morreu no incêndio. Ela não sabe.",
+   "do": {
+    "set": "know_lucia"
+   }
+  },
+  {
+   "id": "ded_marta",
+   "a": "obito_marta",
+   "b": "quadro_kessler",
+   "title": "Por que Kessler arquiva tudo",
+   "text": "Marta é um dos 41. Se o sinal acabar, ele a perde de novo. Por isso ele encobre os desaparecimentos.",
+   "do": {
+    "set": "know_kessler"
+   }
+  },
+  {
+   "id": "ded_padrao",
+   "a": "cartazes",
+   "b": "caderno_daniel",
+   "title": "Ele ouviu",
+   "text": "Todos os desaparecidos ouviram 7.17 antes de sumir. O sinal escolhe quem escuta.",
+   "do": {
+    "set": "know_pattern"
+   }
+  },
+  {
+   "id": "ded_halvorsen",
+   "a": "notas_lamparina",
+   "b": "foto_1979",
+   "title": "O homem da foto",
+   "text": "O Dr. Halvorsen da foto de 1978 criou o Projeto Lamparina no subsolo do Santa Inês. A casa dele ainda tem luz paga.",
+   "do": {
+    "set": [
+     "halvorsen_open",
+     "know_halvorsen"
+    ]
+   }
+  },
+  {
+   "id": "ded_halvorsen2",
+   "a": "notas_lamparina",
+   "b": "contas_halvorsen",
+   "title": "Alguém mora na Casa Halvorsen",
+   "text": "As contas são pagas, o cadeado foi trocado. Halvorsen nunca saiu de casa.",
+   "do": {
+    "set": [
+     "halvorsen_open",
+     "know_halvorsen"
+    ]
+   }
+  },
+  {
+   "id": "ded_maestro",
+   "a": "radio_abel",
+   "b": "notas_lamparina",
+   "title": "O vigia é o Maestro",
+   "text": "O rádio do Sr. Abel é a peça nº 1 da KRVN. Abel é Aurelio Halvorsen — o dono do sinal.",
+   "do": {
+    "set": "know_maestro"
+   }
+  },
+  {
+   "id": "ded_maestro2",
+   "a": "tell_abel_photo",
+   "b": "foto_1979",
+   "title": "O rosto na foto",
+   "text": "A foto queimada do Sr. Abel mostra o rosto do Dr. Halvorsen de 1978.",
+   "do": {
+    "set": "know_maestro"
+   }
+  },
+  {
+   "id": "ded_iris",
+   "a": "certidao_iris",
+   "b": "diario_halvorsen",
+   "title": "Por quem ele faz isso",
+   "text": "Iris morreu no lago antes do incêndio. Todo o sinal existe para que a voz dela não se apague. Ela é a única que ele ouviria.",
+   "do": {
+    "set": "know_iris"
+   }
+  },
+  {
+   "id": "ded_iris2",
+   "a": "pegadas_lago",
+   "b": "retrato_iris",
+   "title": "A menina do lago",
+   "text": "As pegadas do lago são da menina do retrato: Iris Halvorsen.",
+   "do": {
+    "set": "know_iris_lake"
+   }
+  },
+  {
+   "id": "ded_sam",
+   "a": "cracha_sam",
+   "b": "fita_sam",
+   "title": "Onde Sam está",
+   "text": "Sam ouviu a contagem até 41 e desceu ao subsolo. O sinal o guardou como voz nova.",
+   "do": {
+    "set": "know_sam"
+   }
+  },
+  {
+   "id": "ded_daniel",
+   "a": "fichas_lamparina",
+   "b": "caderno_daniel",
+   "title": "Onde Daniel está",
+   "text": "Daniel foi marcado como 'voz compatível'. Ele está na torre — ainda não virou eco.",
+   "do": {
+    "set": "know_daniel"
+   }
+  }
+ ]
+}

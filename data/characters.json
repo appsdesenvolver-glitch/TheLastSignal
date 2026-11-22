@@ -1,0 +1,119 @@
+{
+ "elias": {
+  "name": "Elias Vance",
+  "short": "Elias",
+  "age": 17,
+  "role": "Estudante, filho do técnico de rádio desaparecido",
+  "bio": "Há três semanas o pai de Elias, Daniel, saiu para consertar a antena da velha torre KRVN e não voltou. A polícia diz que ele foi embora. Elias não acredita. Desde então, o walkie-talkie que Daniel deixou na bancada chia sozinho às 3 da manhã — e às vezes chama o nome dele.",
+  "quote": "Se é a voz dele, eu vou até o fim da frequência.",
+  "ability": "radio",
+  "ability_name": "Sintonia",
+  "ability_desc": "O walkie-talkie capta o chiado dos mortos. Revela espíritos disfarçados por perto e mostra um medidor de SINAL permanente.",
+  "stats": {
+   "speed": 1.0,
+   "stamina": 100
+  },
+  "palette": {
+   "skin": "d1a68c",
+   "hair": "3a2a20",
+   "top": "4a5236",
+   "bottom": "1b1c20",
+   "shoes": "d9d6cf",
+   "accent": "8a8a8a"
+  },
+  "build": "slim",
+  "hair": "short",
+  "height": 1.0,
+  "start_location": "casa_vance",
+  "start_x": 760,
+  "opening": "opening_elias"
+ },
+ "maya": {
+  "name": "Maya Cordeiro",
+  "short": "Maya",
+  "age": 17,
+  "role": "Repórter do jornal escolar The Ravenhill Echo",
+  "bio": "Maya mora com a avó Lúcia desde que a mãe morreu. Escreve sobre os desaparecimentos que ninguém quer publicar. Na semana passada revelou um filme da câmera instantânea e encontrou uma foto que não tirou: a avó, na frente do Hospital Santa Inês, com a data de 1979 — exatamente como é hoje.",
+  "quote": "Uma foto não mente. As pessoas, sim.",
+  "ability": "camera_flash",
+  "ability_name": "Flash",
+  "ability_desc": "Fotografa duas vezes mais rápido. O flash atordoa criaturas próximas e as faz recuar.",
+  "stats": {
+   "speed": 1.0,
+   "stamina": 95
+  },
+  "palette": {
+   "skin": "b9866a",
+   "hair": "111014",
+   "top": "6e1f2b",
+   "bottom": "17181c",
+   "shoes": "222225",
+   "accent": "c9c4b5"
+  },
+  "build": "slim",
+  "hair": "bob",
+  "height": 0.96,
+  "start_location": "casa_cordeiro",
+  "start_x": 640,
+  "opening": "opening_maya"
+ },
+ "theo": {
+  "name": "Theo Ashford",
+  "short": "Theo",
+  "age": 21,
+  "role": "Paramédico em treinamento no Hospital Geral",
+  "bio": "O irmão de Theo, Sam, sumiu há um ano depois de uma festa na Estrada 9. Theo largou a faculdade e aceitou o plantão noturno no Hospital Geral — construído sobre as ruínas do Santa Inês — porque os pacientes de madrugada às vezes falam de um garoto de moletom vermelho que pede para ir para casa.",
+  "quote": "Eu salvo quem dá para salvar. Sam ainda dá.",
+  "ability": "first_aid",
+  "ability_name": "Primeiros socorros",
+  "ability_desc": "Recupera 40 de saúde (recarga longa). Acessa prontuários e áreas restritas do hospital.",
+  "stats": {
+   "speed": 1.02,
+   "stamina": 115
+  },
+  "palette": {
+   "skin": "e0bba3",
+   "hair": "b7a47c",
+   "top": "1f2638",
+   "bottom": "2b2c30",
+   "shoes": "4a3426",
+   "accent": "a8292b",
+   "coat_long": true
+  },
+  "build": "tall",
+  "hair": "short",
+  "height": 1.07,
+  "start_location": "hospital_lobby",
+  "start_x": 420,
+  "opening": "opening_theo"
+ },
+ "naomi": {
+  "name": "Naomi Reyes",
+  "short": "Naomi",
+  "age": 22,
+  "role": "Mecânica do posto da Estrada 9",
+  "bio": "Aos nove anos Naomi afundou no Lago Corvo e ficou três minutos sem respirar. Voltou vendo coisas: pegadas molhadas que não secam, pessoas com a sombra errada. Aprendeu a não comentar. Agora as pegadas levam todas para a mesma colina — a da torre.",
+  "quote": "Eu não vejo fantasmas. Eu vejo onde eles pisam.",
+  "ability": "vision",
+  "ability_name": "Visão",
+  "ability_desc": "Por alguns segundos, espíritos brilham e pistas escondidas aparecem no cenário.",
+  "stats": {
+   "speed": 1.0,
+   "stamina": 110
+  },
+  "palette": {
+   "skin": "6e4633",
+   "hair": "141012",
+   "top": "5a3b26",
+   "bottom": "5c6066",
+   "shoes": "2e2620",
+   "accent": "9e2a22"
+  },
+  "build": "slim",
+  "hair": "puff",
+  "height": 0.98,
+  "start_location": "posto",
+  "start_x": 560,
+  "opening": "opening_naomi"
+ }
+}

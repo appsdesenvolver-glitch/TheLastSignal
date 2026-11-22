@@ -1,0 +1,488 @@
+{
+ "edith": {
+  "name": "Edith Marlowe",
+  "role": "Dona do Marlowe's Diner",
+  "spirit": true,
+  "kind": "benevolent",
+  "desc": "Serve café a qualquer hora. Lembra o pedido de todo mundo. Nunca tira o avental.",
+  "palette": {
+   "skin": "d8b8a4",
+   "hair": "9a8f86",
+   "top": "5d7180",
+   "bottom": "3a3a40",
+   "shoes": "1a1a1a",
+   "accent": "e8e1d2"
+  },
+  "build": "wide",
+  "hair": "bob",
+  "height": 0.93,
+  "schedule": [
+   {
+    "from": 0,
+    "to": 24,
+    "loc": "diner",
+    "x": 980,
+    "pose": "counter"
+   }
+  ],
+  "dialogue": [
+   {
+    "if": {
+     "flag": "edith_confronted"
+    },
+    "id": "edith_after"
+   },
+   {
+    "if": {
+     "night": true
+    },
+    "id": "edith_night"
+   },
+   {
+    "id": "edith_day"
+   }
+  ]
+ },
+ "abel": {
+  "name": "Sr. Abel",
+  "role": "Vigia noturno do colégio",
+  "spirit": true,
+  "kind": "malevolent",
+  "desc": "Avô de todos. Doces no bolso, rádio de pilha no ouvido. Ninguém lembra quando ele começou a trabalhar ali.",
+  "palette": {
+   "skin": "d4b49c",
+   "hair": "cfcac0",
+   "top": "3b4a3a",
+   "bottom": "2a2a2e",
+   "shoes": "1b1b1b",
+   "accent": "a08a3a"
+  },
+  "build": "old",
+  "hair": "cap",
+  "height": 0.97,
+  "schedule": [
+   {
+    "from": 18,
+    "to": 6,
+    "loc": "escola_corredor",
+    "x": 1700,
+    "pose": "idle"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "loc": "escola_ext",
+    "x": 900,
+    "pose": "idle"
+   },
+   {
+    "from": 6,
+    "to": 9,
+    "loc": "praca",
+    "x": 1300,
+    "pose": "sit"
+   }
+  ],
+  "dialogue": [
+   {
+    "if": {
+     "chapter_min": 5
+    },
+    "id": "abel_end"
+   },
+   {
+    "id": "abel"
+   }
+  ]
+ },
+ "lucia": {
+  "name": "Lúcia Cordeiro",
+  "role": "Avó de Maya",
+  "spirit": true,
+  "kind": "benevolent",
+  "desc": "Costura, ouve rádio AM e chama a neta de 'minha luz'. Nunca come na frente de ninguém.",
+  "palette": {
+   "skin": "c08d70",
+   "hair": "d9d6d0",
+   "top": "4d3a52",
+   "bottom": "2b2430",
+   "shoes": "1b1b1b",
+   "accent": "d0b46a"
+  },
+  "build": "old",
+  "hair": "bob",
+  "height": 0.9,
+  "schedule": [
+   {
+    "from": 0,
+    "to": 24,
+    "loc": "casa_cordeiro",
+    "x": 1100,
+    "pose": "sit"
+   }
+  ],
+  "dialogue": [
+   {
+    "if": {
+     "char": "maya"
+    },
+    "id": "lucia_maya"
+   },
+   {
+    "id": "lucia"
+   }
+  ]
+ },
+ "clara": {
+  "name": "Enfermeira Clara Wynn",
+  "role": "Plantão noturno, Hospital Geral",
+  "spirit": true,
+  "kind": "ambiguous",
+  "desc": "O uniforme é antigo demais. Os pacientes que ela acompanha à noite morrem em paz — ou somem.",
+  "palette": {
+   "skin": "e3c9b8",
+   "hair": "6b4a2e",
+   "top": "e6e2d6",
+   "bottom": "e6e2d6",
+   "shoes": "f0eee8",
+   "accent": "9b2a2a"
+  },
+  "build": "slim",
+  "hair": "bob",
+  "height": 0.95,
+  "schedule": [
+   {
+    "from": 19,
+    "to": 5,
+    "loc": "hospital_lobby",
+    "x": 1500,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "clara"
+ },
+ "iris": {
+  "name": "Iris",
+  "role": "Menina do balanço",
+  "spirit": true,
+  "kind": "benevolent",
+  "desc": "Vestido amarelo encharcado, mesmo sem chuva. Canta sempre a mesma música de ninar, de trás para a frente.",
+  "palette": {
+   "skin": "e8cdbb",
+   "hair": "3b2b1e",
+   "top": "b9a046",
+   "bottom": "b9a046",
+   "shoes": "3a2a22",
+   "accent": "f0e6c8"
+  },
+  "build": "child",
+  "hair": "long",
+  "height": 0.58,
+  "schedule": [
+   {
+    "from": 18,
+    "to": 5,
+    "loc": "praca",
+    "x": 900,
+    "pose": "idle"
+   },
+   {
+    "from": 5,
+    "to": 7,
+    "loc": "estrada9",
+    "x": 2300,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "iris"
+ },
+ "marta": {
+  "name": "Marta Kessler",
+  "role": "Esposa do delegado",
+  "spirit": true,
+  "kind": "ambiguous",
+  "desc": "Só aparece depois que escurece. O delegado a chama de 'minha razão'.",
+  "palette": {
+   "skin": "d6b29a",
+   "hair": "8a5a3a",
+   "top": "2a3b4a",
+   "bottom": "2a3b4a",
+   "shoes": "111111",
+   "accent": "c9c4b5"
+  },
+  "build": "slim",
+  "hair": "long",
+  "height": 0.94,
+  "schedule": [
+   {
+    "from": 21,
+    "to": 4,
+    "loc": "praca",
+    "x": 1650,
+    "pose": "wall"
+   }
+  ],
+  "dialogue": "marta"
+ },
+ "jonah": {
+  "name": "Jonah Pike",
+  "role": "Colega de escola, teórico da conspiração",
+  "spirit": false,
+  "desc": "Fita isolante no fone, mapa da cidade cheio de alfinetes vermelhos. Ele está certo mais vezes do que deveria.",
+  "palette": {
+   "skin": "e2c0a6",
+   "hair": "b45a2a",
+   "top": "2b5a6e",
+   "bottom": "35383f",
+   "shoes": "c4c2bb",
+   "accent": "e0c040"
+  },
+  "build": "slim",
+  "hair": "short",
+  "height": 0.97,
+  "exists_if": {
+   "not_flag": "jonah_taken"
+  },
+  "schedule": [
+   {
+    "from": 7,
+    "to": 15,
+    "loc": "escola_corredor",
+    "x": 900,
+    "pose": "wander"
+   },
+   {
+    "from": 15,
+    "to": 19,
+    "loc": "centro",
+    "x": 1500,
+    "pose": "wander"
+   },
+   {
+    "from": 19,
+    "to": 22,
+    "loc": "rua_corvo",
+    "x": 1700,
+    "pose": "wander"
+   }
+  ],
+  "dialogue": [
+   {
+    "if": {
+     "chapter_min": 4
+    },
+    "id": "jonah_late"
+   },
+   {
+    "id": "jonah"
+   }
+  ]
+ },
+ "greer": {
+  "name": "Walt Greer",
+  "role": "Dono da Rádios Greer",
+  "spirit": false,
+  "desc": "Setenta e poucos anos, mãos firmes, olhar que desvia quando alguém fala em 1979.",
+  "palette": {
+   "skin": "c9a48e",
+   "hair": "a9a59c",
+   "top": "5a4a3a",
+   "bottom": "2e2e30",
+   "shoes": "2a1d16",
+   "accent": "c9b27c"
+  },
+  "build": "old",
+  "hair": "bald",
+  "height": 0.95,
+  "schedule": [
+   {
+    "from": 9,
+    "to": 19,
+    "loc": "loja_radios",
+    "x": 900,
+    "pose": "counter"
+   },
+   {
+    "from": 19,
+    "to": 23,
+    "loc": "diner",
+    "x": 1400,
+    "pose": "sit"
+   }
+  ],
+  "dialogue": "greer"
+ },
+ "tomas": {
+  "name": "Padre Tomás Ilha",
+  "role": "Pároco de São Judas",
+  "spirit": false,
+  "desc": "Reza pelos 41 todo dia 31 de outubro. Guarda chaves demais para um padre.",
+  "palette": {
+   "skin": "b98f73",
+   "hair": "2a2422",
+   "top": "121214",
+   "bottom": "121214",
+   "shoes": "0e0e0e",
+   "accent": "e8e8e8"
+  },
+  "build": "wide",
+  "hair": "short",
+  "height": 1.0,
+  "schedule": [
+   {
+    "from": 7,
+    "to": 20,
+    "loc": "igreja",
+    "x": 1300,
+    "pose": "idle"
+   },
+   {
+    "from": 20,
+    "to": 22,
+    "loc": "centro",
+    "x": 2700,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "tomas"
+ },
+ "kessler": {
+  "name": "Delegado Roy Kessler",
+  "role": "Chefe de polícia de Ravenhill",
+  "spirit": false,
+  "desc": "Trinta anos de distintivo. Arquivou cada desaparecimento como 'fuga voluntária'.",
+  "palette": {
+   "skin": "d3a88c",
+   "hair": "5a524a",
+   "top": "34404e",
+   "bottom": "2a2f38",
+   "shoes": "111111",
+   "accent": "c9b27c"
+  },
+  "build": "wide",
+  "hair": "short",
+  "height": 1.04,
+  "schedule": [
+   {
+    "from": 8,
+    "to": 20,
+    "loc": "delegacia",
+    "x": 1500,
+    "pose": "idle"
+   },
+   {
+    "from": 21,
+    "to": 4,
+    "loc": "praca",
+    "x": 1500,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "kessler"
+ },
+ "benny": {
+  "name": "Benny Okafor",
+  "role": "Dono do posto da Estrada 9",
+  "spirit": false,
+  "desc": "Chefe da Naomi. Rabugento, generoso, e anda cavando atrás do posto de madrugada.",
+  "palette": {
+   "skin": "5a3a2a",
+   "hair": "1a1616",
+   "top": "7a3a2a",
+   "bottom": "3a3c40",
+   "shoes": "1a1a1a",
+   "accent": "d9d0b0"
+  },
+  "build": "wide",
+  "hair": "cap",
+  "height": 1.02,
+  "schedule": [
+   {
+    "from": 6,
+    "to": 23,
+    "loc": "posto",
+    "x": 1000,
+    "pose": "counter"
+   },
+   {
+    "from": 23,
+    "to": 3,
+    "loc": "estrada9",
+    "x": 1500,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "benny"
+ },
+ "helen": {
+  "name": "Dra. Helen Vasquez",
+  "role": "Médica-chefe do Hospital Geral",
+  "spirit": false,
+  "desc": "Pesquisa os arquivos do Santa Inês às escondidas. Alguém na diretoria não quer.",
+  "palette": {
+   "skin": "c49477",
+   "hair": "201a18",
+   "top": "e8e6e0",
+   "bottom": "2f3440",
+   "shoes": "1a1a1a",
+   "accent": "4a7a8a"
+  },
+  "build": "slim",
+  "hair": "long",
+  "height": 0.97,
+  "schedule": [
+   {
+    "from": 8,
+    "to": 19,
+    "loc": "hospital_lobby",
+    "x": 700,
+    "pose": "idle"
+   }
+  ],
+  "dialogue": "helen"
+ },
+ "daniel": {
+  "name": "Daniel Vance",
+  "role": "Técnico de rádio desaparecido",
+  "spirit": false,
+  "desc": "Pai de Elias.",
+  "exists_if": {
+   "flag": "__cutscene_only__"
+  },
+  "palette": {
+   "skin": "cfa58a",
+   "hair": "3a2c22",
+   "top": "3c3a32",
+   "bottom": "2a2a2e",
+   "shoes": "3a2a20",
+   "accent": "c9b27c"
+  },
+  "build": "wide",
+  "hair": "short",
+  "height": 1.05,
+  "schedule": [],
+  "dialogue": ""
+ },
+ "sam": {
+  "name": "Sam Ashford",
+  "role": "Irmão de Theo, desaparecido",
+  "spirit": false,
+  "desc": "Moletom vermelho.",
+  "exists_if": {
+   "flag": "__cutscene_only__"
+  },
+  "palette": {
+   "skin": "e0bba3",
+   "hair": "b7a47c",
+   "top": "8e1f22",
+   "bottom": "2b2c30",
+   "shoes": "d0cec8",
+   "accent": "222222"
+  },
+  "build": "slim",
+  "hair": "short",
+  "height": 0.92,
+  "schedule": [],
+  "dialogue": ""
+ }
+}
