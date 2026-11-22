@@ -128,7 +128,7 @@ func load_location(id: String, x: float, with_fade: bool = true) -> void:
 		props_node.add_child(pr)
 	player.position = Vector2(clampf(x, 40.0, stage_width - 40.0), Backdrop.GROUND)
 	player.bounds = Vector2(40.0, stage_width - 40.0)
-	if player.hidden:
+	if player.is_hidden:
 		player.leave_hide()
 	camera.limit_left = 0
 	camera.limit_right = int(stage_width)
@@ -268,9 +268,8 @@ func _process(delta: float) -> void:
 	_update_interaction()
 	_update_triggers()
 	_update_chase_audio(delta)
-	_update_abilities(delta)
 	_night_events(delta)
-	if Input.is_action_just_pressed("interact") and not player.hidden:
+	if Input.is_action_just_pressed("interact") and not player.is_hidden:
 		_interact()
 	if Input.is_action_just_pressed("notebook") or Input.is_action_just_pressed("pause"):
 		notebook.open()
@@ -544,7 +543,7 @@ func signal_strength() -> float:
 
 
 func take_photo() -> void:
-	if player.photo_cd > 0.0 or player.locked or player.hidden:
+	if player.photo_cd > 0.0 or player.locked or player.is_hidden:
 		return
 	player.photo_cd = 2.5 if Game.character == "maya" else 5.0
 	Sfx.play("photo")

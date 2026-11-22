@@ -268,7 +268,7 @@ func _paint_main(c: Layer) -> void:
 				_window(c, Rect2(dx + 50, y0 - 150, bw * 0.5 - 70, 110), int(dx) + 3, bcol.darkened(0.4))
 				# letreiro
 				var sign_col := Color(d.get("sign_color", "b8453a"))
-				var lit := night > 0.3 and not d.get("closed_sign", false)
+				var lit: bool = night > 0.3 and not d.get("closed_sign", false)
 				if lit and d.get("sign_flicker", false) and fmod(Time.get_ticks_msec() / 130.0, 9.0) < 1.0:
 					lit = false
 				var sr := Rect2(bx + bw * 0.15, y0 - bh + 22, bw * 0.7, 44)
@@ -504,10 +504,10 @@ func _deco(c: CanvasItem, k: String, x: float, wall: Color) -> void:
 				c.draw_rect(Rect2(x - 160 + i * 120, y0 - 150, 12, 150), wood.darkened(0.2))
 		"altar":
 			c.draw_rect(Rect2(x - 90, y0 - 110, 180, 110), Color("d8d1c2").darkened(0.3 + _night * 0.4))
-			for k in [-60, 60]:
-				c.draw_rect(Rect2(x + k - 4, y0 - 150, 8, 40), Color(0.9, 0.88, 0.8))
+			for cx in [-60, 60]:
+				c.draw_rect(Rect2(x + cx - 4, y0 - 150, 8, 40), Color(0.9, 0.88, 0.8))
 				if _night > 0.2:
-					c.draw_texture_rect(Art.glow(), Rect2(x + k - 30, y0 - 180, 60, 60), false, Color(1, 0.7, 0.3, 0.6))
+					c.draw_texture_rect(Art.glow(), Rect2(x + cx - 30, y0 - 180, 60, 60), false, Color(1, 0.7, 0.3, 0.6))
 		"machine":
 			c.draw_rect(Rect2(x - 120, y0 - 260, 240, 260), Color("34373a"))
 			c.draw_circle(Vector2(x - 50, y0 - 170), 40, Color("1f2124"))

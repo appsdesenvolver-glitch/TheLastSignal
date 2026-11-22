@@ -47,7 +47,7 @@ func flicker(t: float) -> void:
 func _process(delta: float) -> void:
 	_t += delta
 	if type == "lamp":
-		var on := Clock.darkness() > 0.35 and not data.get("broken", false)
+		var on: bool = Clock.darkness() > 0.35 and not data.get("broken", false)
 		var e := 1.2 if on else 0.0
 		if on and (data.get("flicker", false) or _flicker > 0.0):
 			if fmod(_t * 13.0 + position.x, 7.0) < (2.5 if _flicker > 0.0 else 0.6):

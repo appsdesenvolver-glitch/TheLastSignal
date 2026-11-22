@@ -279,7 +279,7 @@ func _tab_map() -> void:
 		for id in districts[d]:
 			var l: Dictionary = Data.locations[id]
 			var seen: bool = Game.visited.has(id)
-			var here := id == Game.location
+			var here: bool = id == Game.location
 			t += "   %s %s\n" % ["●" if here else ("○" if seen else "·"), l.get("name", id) if seen else "???"]
 		v.add_child(_rich(t))
 

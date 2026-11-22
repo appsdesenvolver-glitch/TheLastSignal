@@ -77,14 +77,14 @@ func _process(delta: float) -> void:
 				_search_t = 5.0
 			_perceive(p, dx, dist, delta)
 		S.CHASE:
-			if p.hidden and dist > 70.0:
+			if p.is_hidden and dist > 70.0:
 				state = S.SEARCH
 				_search_t = 3.0 if form == "conductor" else 6.0
 				target_x = last_seen_x
 			else:
 				last_seen_x = p.position.x
 				_move_to(p.position.x, spd_chase, delta, "chase")
-				if dist < 46.0 and not p.hidden:
+				if dist < 46.0 and not p.is_hidden:
 					p.hurt(damage, position.x)
 					world.fx.shake(10.0)
 					if form == "static":
@@ -124,7 +124,7 @@ func _process(delta: float) -> void:
 
 
 func _perceive(p: Player, dx: float, dist: float, delta: float) -> void:
-	if p.hidden:
+	if p.is_hidden:
 		aware = maxf(0.0, aware - delta)
 		return
 	var facing_player := signf(dx) == float(actor.facing) or dist < 90.0

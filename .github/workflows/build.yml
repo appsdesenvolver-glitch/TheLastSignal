@@ -69,7 +69,13 @@ jobs:
           echo "GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD=android" >> $GITHUB_ENV
       - name: Importar recursos
         run: |
-          timeout 600 godot --headless --import || timeout 600 godot --headless --editor --quit || true
+          (timeout 600 godot --headless --import || timeout 600 godot --headless --editor --quit || true) 2>&1 | tee import.log | tail -40
+      - name: Verificar compilação dos scripts
+        run: |
+          if grep -nE "SCRIPT ERROR|Parse Error|Compile Error" import.log; then
+            echo "::error::Erros de compilação GDScript (ver acima)"; exit 1
+          fi
+          echo "Todos os scripts compilaram."
       - name: Exportar APK (Android)
         run: |
           mkdir -p build/android
@@ -94,7 +100,7 @@ jobs:
           if-no-files-found: warn
       - name: Testes automatizados (jogatina completa dos 4 protagonistas)
         run: |
-          timeout 600 godot --headless --path . res://tests/Tests.tscn 2>&1 | tee test-log.txt | tail -120
+          timeout 300 godot --headless --path . res://tests/Tests.tscn 2>&1 | tee test-log.txt | tail -120
           grep -q "0 falhas" test-log.txt
       - uses: actions/upload-artifact@v4
         if: always()

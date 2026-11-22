@@ -13,7 +13,7 @@ var velocity_x: float = 0.0
 var stamina: float = 100.0
 var max_stamina: float = 100.0
 var crouching: bool = false
-var hidden: bool = false
+var is_hidden: bool = false
 var hide_spot: Node = null
 var flashlight_on: bool = false
 var flashlight: PointLight2D
@@ -98,7 +98,7 @@ func _process(delta: float) -> void:
 		velocity_x = move_toward(velocity_x, 0.0, 1400.0 * delta)
 		noise = 0.0
 		return
-	if hidden:
+	if is_hidden:
 		noise = 0.0
 		stamina = minf(max_stamina, stamina + 25.0 * delta)
 		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
@@ -152,7 +152,7 @@ func toggle_flashlight() -> void:
 
 
 func enter_hide(spot: Node) -> void:
-	hidden = true
+	is_hidden = true
 	hide_spot = spot
 	velocity_x = 0.0
 	position.x = spot.position.x
@@ -163,7 +163,7 @@ func enter_hide(spot: Node) -> void:
 
 
 func leave_hide() -> void:
-	hidden = false
+	is_hidden = false
 	hide_spot = null
 	actor.modulate.a = 1.0
 	flashlight.enabled = flashlight_on
