@@ -62,7 +62,7 @@ func _exec(steps: Array) -> void:
 		i += 1
 		var c: String = s.get("c", "")
 		# ao pular, executa só o que muda estado
-		if _skip and not c in ["effects", "if", "choice", "location", "time", "ending", "chapter", "fade_out", "fade_in", "credits", "rain", "spawn", "despawn", "player_visible", "refresh"]:
+		if _skip and not c in ["effects", "if", "choice", "location", "time", "ending", "chapter", "fade_out", "fade_in", "credits", "rain", "spawn", "despawn", "player_visible", "refresh", "resolve_ending", "cutscene", "ghost"]:
 			continue
 		if c != "say" and c != "choice":
 			world.dialogue.close()
